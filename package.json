@@ -1,0 +1,34 @@
+{
+  "name": "zce.github.io",
+  "version": "0.1.0",
+  "description": "zce's personal homepage",
+  "keywords": [
+    "homepage",
+    "zce"
+  ],
+  "homepage": "https://github.com/zce/zce.github.io#readme",
+  "bugs": {
+    "url": "https://github.com/zce/zce.github.io/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zce/zce.github.io.git"
+  },
+  "license": "MIT",
+  "author": "zce <w@zce.me> (https://zce.me/)",
+  "main": "index.js",
+  "scripts": {
+    "lint": "standard",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "^8.0.1",
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2"
+  },
+  "devDependencies": {
+    "standard": "^12.0.1"
+  }
+}
