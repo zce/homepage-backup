@@ -67,7 +67,7 @@ body {
   padding: 0;
   list-style: none;
   justify-content: center;
-  animation-delay: 0.75s;
+  animation-delay: 0.55s;
 }
 
 .nav li + li::before {
