@@ -1,7 +1,7 @@
 import openColors from './open-colors'
 
 const logo = document.querySelector('.logo')
-const color = logo.querySelector('#color')
+const color = logo.querySelector('g')
 
 const interval = 2222
 const now = Date.now() / interval
