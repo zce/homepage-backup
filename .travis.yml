@@ -1,0 +1,9 @@
+sudo: false
+language: ruby
+rvm: 2.4
+cache: bundler
+
+install:
+  make install
+script:
+  make ci
