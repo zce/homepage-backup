@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+  <title>Hey Bitch, I'm Lei Wang</title>
+  <%- css('css/style.css') %>
+</head>
+<body>
+  <!-- <img class="logo" src="https://img.zce.me/logo.svg" alt="zce.me"> -->
+  <svg class="logo" viewBox="0 0 472 450" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <filter id="shadow-filter" x="-12.7%" y="-13.4%" width="125.4%" height="126.7%" filterUnits="objectBoundingBox">
+        <feOffset dx="0" dy="0" in="SourceAlpha" result="offset-outer"></feOffset>
+        <feGaussianBlur stdDeviation="20" in="offset-outer" result="blue-outer"></feGaussianBlur>
+        <feComposite in="blue-outer" in2="SourceAlpha" operator="out" result="blue-outer"></feComposite>
+        <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 1 0" type="matrix" in="blue-outer"></feColorMatrix>
+      </filter>
+    </defs>
+    <mask id="mask" fill="white">
+      <polygon points="472 114.26 203.028853 335.74 407.1 335.74 472 449.48 64.9 449.48 0 335.74 268.971147 114.26 64.9 114.26 0 0.52 407.1 0.52"></polygon>
+    </mask>
+    <g id="background" mask="url(#mask)" fill="#339AF0">
+      <rect x="0" y="0" width="472" height="449"></rect>
+    </g>
+    <g id="shadow" mask="url(#mask)">
+      <polygon points="0 335.74 64.9 449.48 472 114.26 407.1 0.52" filter="url(#shadow-filter)"></polygon>
+    </g>
+  </svg>
+  <h1 class="title">Hey! Bitch</h1>
+  <p class="description">I'm Lei Wang, a poet of China</p>
+  <ul class="nav">
+    <% for (let item of site.data.links) { %>
+    <li><a href="<%- item.href %>" target="<%- item.target %>"><%- item.text %></a></li>
+    <% } %>
+  </ul>
+  <%- js('js/app.js') %>
+</body>
+</html>
