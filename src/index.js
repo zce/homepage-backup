@@ -5,7 +5,7 @@ import App from './App'
 
 import * as serviceWorker from './serviceWorker'
 
-import './assets/style.css'
+import './index.css'
 
 ReactDOM.render(<App />, document.getElementById('root'))
 

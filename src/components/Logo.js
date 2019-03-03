@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import './Logo.css'
+
 import openColors from '../assets/open-colors'
 
 class Logo extends Component {
