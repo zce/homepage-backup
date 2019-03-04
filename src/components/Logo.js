@@ -8,12 +8,11 @@ class Logo extends Component {
   constructor (props) {
     super(props)
 
-    const interval = 2222
-    const now = Date.now() / interval
+    const interval = 60 * 1000
 
     this.state = {
-      type: ~~(now / 10 % 13),
-      level: ~~(now % 10)
+      type: ~~(Date.now() / interval) % 13,
+      level: ~~(Date.now() / (interval / 10)) % 10
     }
 
     this.handleChange = this.handleChange.bind(this)
@@ -22,11 +21,13 @@ class Logo extends Component {
   render () {
     const { type, level } = this.state
 
-    console.log('%cOC- %c  %c %c  ',
-      'color: ' + openColors[0][7],
-      'border-radius: 3px; background: ' + openColors[type][7],
+    console.log(`%cOC- %c ${type} %c %c ${level} %c → %c  `,
+      `color: ${openColors[0][7]}`,
+      `border-radius: 4px; background: ${openColors[type][7]}`,
       '',
-      'border-radius: 3px; background: ' + openColors[0][level]
+      `border-radius: 4px; background: ${openColors[0][level]}`,
+      '',
+      `border-radius: 4px; background: ${openColors[type][level]}`
     )
 
     return (
