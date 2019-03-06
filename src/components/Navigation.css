@@ -6,8 +6,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  opacity: 0;
-  animation: fadeIn 1s ease 0.55s forwards;
+  animation: fadeIn 2s 0.75s both;
 }
 
 .navigation li + li::before {
@@ -32,15 +31,4 @@
   outline: 0;
   color: #3bc9db;
   text-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.5);
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(2rem) scale(0.8);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
 }

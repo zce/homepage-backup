@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 
-import Logo from './components/Logo'
-import Heading from './components/Heading'
-import Navigation from './components/Navigation'
-import Background from './components/Background'
+import Logo from './Logo'
+import Heading from './Heading'
+import Navigation from './Navigation'
+import Background from './Background'
 
 class App extends Component {
   constructor (props) {

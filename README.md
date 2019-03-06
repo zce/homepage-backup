@@ -21,6 +21,8 @@ You will also see any lint errors in the console.
 
 ### `yarn lint`
 
+Lint the source code in the `src` by [standard](https://standardjs.com).
+
 ### `yarn test`
 
 Launches the test runner in the interactive watch mode.<br>
@@ -53,7 +55,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 [MIT](LICENSE) &copy; [汪磊](https://zce.me)
 
-
+<!--  -->
 
 [travis-image]: https://img.shields.io/travis/zce/zce.github.io.svg
 [travis-url]: https://travis-ci.org/zce/zce.github.io

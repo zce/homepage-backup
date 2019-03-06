@@ -1,11 +1,5 @@
 sudo: false
 
-os:
-  # https://travis-ci.community/t/node-js-build-fails-with-no-obvious-error/961
-  # - windows
-  - linux
-  - osx
-
 language: node_js
 
 node_js:
