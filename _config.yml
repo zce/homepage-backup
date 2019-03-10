@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: zce.me
-subtitle:
-description:
+title: ZCE.ME
+subtitle: MAKE IT BETTER!
+description: MAKE IT BETTER!
 keywords:
 author: zce
-language:
+language: zh-CN
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://zce.me
+url: http://yoursite.com
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -31,7 +31,6 @@ skip_render:
 # Writing
 new_post_name: :title.md # File name of new posts
 default_layout: post
-auto_spacing: true
 titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
 filename_case: 0
@@ -74,16 +73,9 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: zceme
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type:
-
-# BrowserSync
-browsersync:
-  logLevel: "warn"
-  ghostMode:
-    scroll: true
-  instanceName: "uniqueString"
