@@ -9,8 +9,8 @@ class App extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      title: 'Hey! Bitch',
-      slogan: 'I\'m Lei Wang, a poet of China',
+      title: 'Hey! Guys',
+      slogan: 'I\'m Lei Wang, a technical poet of China',
       links: [
         { text: 'Weibo', href: 'https://weibo.com/zceme', target: '_blank' },
         { text: 'WeChat', href: 'https://img.zce.me/wechat.jpg', target: '_blank' },

@@ -2,7 +2,7 @@
   font-weight: normal;
   font-style: normal;
   font-family: 'Againts';
-  src: url('../assets/fonts/againts.eot?') format('eot'), url('../assets/fonts/againts.woff') format('woff'), url('../assets/fonts/againts.ttf') format('truetype'), url('../assets/fonts/againts.svg#Againts') format('svg');
+  src: url('../assets/againts.eot?') format('eot'), url('../assets/againts.woff') format('woff'), url('../assets/againts.ttf') format('truetype'), url('../assets/againts.svg#Againts') format('svg');
 }
 
 .title,
