@@ -1,12 +1,13 @@
 @font-face {
   font-weight: normal;
   font-style: normal;
-  font-family: 'Againts';
+  font-family: Againts;
   src: url('../assets/againts.eot?') format('eot'), url('../assets/againts.woff') format('woff'), url('../assets/againts.ttf') format('truetype'), url('../assets/againts.svg#Againts') format('svg');
 }
 
 .title,
 .slogan {
+  font-weight: 300;
   font-family: Againts;
   animation: fadeIn 2s both;
 }
@@ -26,4 +27,3 @@
   font-size: 2rem;
   animation-delay: 0.5s;
 }
-
