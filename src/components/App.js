@@ -16,7 +16,8 @@ class App extends Component {
         { text: 'WeChat', href: 'https://img.zce.me/wechat.jpg', target: '_blank' },
         { text: 'Blog', href: 'https://blog.zce.me', target: '_blank' },
         { text: 'GitHub', href: 'https://github.com/zce', target: '_blank' },
-        { text: 'Email', href: 'mailto:w@zce.me', target: '_self' }
+        { text: 'Email', href: 'mailto:w@zce.me', target: '_self' },
+        { text: 'Discuss', href: 'https://github.com/zce/discuss/issues', target: '_blank' }
       ]
     }
   }
