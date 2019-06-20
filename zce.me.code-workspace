@@ -1,0 +1,34 @@
+{
+	"folders": [
+		{
+      "name": "content",
+			"path": "content"
+		},
+		// {
+    //   "name": "pages",
+		// 	"path": "src/pages"
+		// },
+		// {
+    //   "name": "templates",
+		// 	"path": "src/templates"
+		// },
+		{
+      "name": "src",
+			"path": "src"
+		},
+		{
+      "name": "root",
+			"path": "."
+		}
+	],
+	"settings": {
+    "explorer.openEditors.visible": 0,
+    "files.exclude": {
+      ".cache": false,
+      "content": true,
+      "node_modules": true,
+      "public": false,
+      "src": true
+    }
+  }
+}
