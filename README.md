@@ -92,16 +92,18 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 
 ## 💫 Deploy
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-hello-world)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/zce/zce.me)
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
 ## References
 
-- https://github.com/greglobinski/gatsby-starter-personal-blog
 - https://github.com/fabe/gatsby-universal
 - https://github.com/scttcper/gatsby-casper
 - https://github.com/niklasmtj/gatsby-starter-julia
 - https://github.com/dvzrd/gatsby-sfiction
+- https://github.com/Vagr9K/gatsby-advanced-starter
+- https://github.com/greglobinski/gatsby-starter-personal-blog
 - https://github.com/prichey/prestonrichey.com
+- https://github.com/taniarascia/taniarascia.com
 - https://github.com/fathomlondon/fath.om

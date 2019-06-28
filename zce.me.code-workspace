@@ -23,12 +23,14 @@
 	],
 	"settings": {
     "explorer.openEditors.visible": 0,
+    "breadcrumbs.enabled": false,
     "files.exclude": {
       ".cache": false,
       "content": true,
       "node_modules": true,
       "public": false,
       "src": true
-    }
+    },
+    "workbench.editor.showTabs": false
   }
 }

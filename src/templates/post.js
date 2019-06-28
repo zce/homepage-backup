@@ -36,12 +36,6 @@ export default ({ data, pageContext: { prev, next } }) => (
 
 export const query = graphql`
   query ($slug: String!) {
-    site {
-      siteMetadata {
-        title
-        author
-      }
-    }
     markdownRemark (fields: { slug: { eq: $slug } }) {
       frontmatter {
         title
