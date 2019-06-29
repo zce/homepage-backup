@@ -1,7 +1,14 @@
 ---
 title: Welcome to Ghost
 date: 2019-06-01T00:00:00.000Z
-feature_image: https://static.ghost.org/v2.0.0/images/welcome-to-ghost.jpg
+cover: https://static.ghost.org/v2.0.0/images/welcome-to-ghost.jpg
+authors:
+  - zce
+categories:
+  - uncategorized
+tags:
+  - ghost
+permalink: /blog/welcome
 ---
 
 👋 Welcome, it's great to have you here.
@@ -22,4 +29,4 @@ The version of Ghost you are looking at right now would not have been made possi
 
 The main thing you'll want to read about next is probably: [the Ghost editor](). This is where the good stuff happens.
 
-> *By the way, once you're done reading, you can simply delete the default **Ghost** user from your team to remove all of these introductory posts!*
+> _By the way, once you're done reading, you can simply delete the default **Ghost** user from your team to remove all of these introductory posts!_

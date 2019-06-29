@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql, useStaticQuery, Link } from 'gatsby'
-import layoutStyles from "./layout.module.css"
+import layoutStyles from './layout.module.css'
 
 const ListLink = props => (
   <li style={{ display: `inline-block`, marginRight: `1rem` }}>
@@ -36,7 +36,10 @@ export default ({ children }) => {
       </header>
       {children}
       <footer style={{ textAlign: `center` }}>
-        <p>&copy; {new Date().getFullYear()}, Built with <a href="https://gatsbyjs.org">Gatsby</a></p>
+        <p>
+          &copy; {new Date().getFullYear()}, Built with{' '}
+          <a href="https://gatsbyjs.org">Gatsby</a>
+        </p>
       </footer>
     </div>
   )

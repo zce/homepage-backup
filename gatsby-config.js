@@ -48,18 +48,18 @@ module.exports = {
           {
             resolve: `gatsby-remark-responsive-iframe`,
             options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
-            },
+              wrapperStyle: `margin-bottom: 1.0725rem`
+            }
           },
           {
             resolve: `gatsby-remark-copy-linked-files`,
             options: {
-              destinationDir: `attachments`,
+              destinationDir: `attachments`
             }
           },
           `gatsby-remark-autolink-headers`,
           `gatsby-remark-smartypants`,
-          `gatsby-remark-prismjs`,
+          `gatsby-remark-prismjs`
         ]
       }
     },
@@ -74,12 +74,16 @@ module.exports = {
     },
     `gatsby-plugin-react-helmet`,
     {
-			resolve: `gatsby-plugin-nprogress`,
-			options: {
-				color: `#1ca086`,
-				showSpinner: false
-			}
-		},
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        color: `#1ca086`,
+        showSpinner: false
+      }
+    },
     `gatsby-plugin-offline`
-  ]
+  ],
+  mapping: {
+    // https://www.gatsbyjs.org/docs/gatsby-config/#mapping-node-types
+    // "MarkdownRemark.frontmatter.author": `AuthorYaml`,
+  }
 }

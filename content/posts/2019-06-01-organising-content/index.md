@@ -1,7 +1,7 @@
 ---
 title: Organising your content
 date: 2019-06-01T00:00:00.000Z
-feature_image: https://static.ghost.org/v2.0.0/images/organising-your-content.jpg
+cover: https://static.ghost.org/v2.0.0/images/organising-your-content.jpg
 ---
 
 Ghost has a flexible organisational taxonomy called **tags** which can be used to configure your site structure using **dynamic routing**.
@@ -12,15 +12,15 @@ You can think of tags like Gmail labels. By tagging posts with one or more keywo
 
 When you create content for your publication you can assign tags to help differentiate between categories of content.
 
-For example you may tag some content with  News and other content with Podcast, which would create two distinct categories of content listed on `/tag/news/` and `/tag/weather/`, respectively.
+For example you may tag some content with News and other content with Podcast, which would create two distinct categories of content listed on `/tag/news/` and `/tag/weather/`, respectively.
 
-If you tag a post with both `News` *and* `Weather` - then it appears in both sections. Tag archives are like dedicated home-pages for each category of content that you have. They have their own pages, their own RSS feeds, and can support their own cover images and meta data.
+If you tag a post with both `News` _and_ `Weather` - then it appears in both sections. Tag archives are like dedicated home-pages for each category of content that you have. They have their own pages, their own RSS feeds, and can support their own cover images and meta data.
 
 # The primary tag
 
 Inside the Ghost editor, you can drag and drop tags into a specific order. The first tag in the list is always given the most importance, and some themes will only display the primary tag (the first tag in the list) by default.
 
-> ***News**, Technology, Startup*
+> **\*News**, Technology, Startup\*
 
 So you can add the most important tag which you want to show up in your theme, but also add related tags which are less important.
 
@@ -30,11 +30,11 @@ Sometimes you may want to assign a post a specific tag, but you don't necessaril
 
 For example, if you sometimes publish posts with video content - you might want your theme to adapt and get rid of the sidebar for these posts, to give more space for an embedded video to fill the screen. In this case, you could use private tags to tell your theme what to do.
 
-> ***News**, #video*
+> **\*News**, #video\*
 
 Here, the theme would assign the post publicly displayed tags of News - but it would also keep a private record of the post being tagged with #video. In your theme, you could then look for private tags conditionally and give them special formatting.
 
-> *You can find documentation for theme development techniques like this and many more over on Ghost's extensive theme documentation.*
+> _You can find documentation for theme development techniques like this and many more over on Ghost's extensive theme documentation._
 
 # Dynamic Routing
 
@@ -52,6 +52,6 @@ There are lots of use cases for dynamic routing with Ghost, here are a few commo
 - Including dates in permalinks for your posts
 - Setting posts to have a URL relative to their primary tag like `example.com/europe/story-title/`
 
-> *Dynamic routing can be configured in Ghost using YAML files. Read our dynamic routing documentation for further details.*
+> _Dynamic routing can be configured in Ghost using YAML files. Read our dynamic routing documentation for further details._
 
 You can further customise your site using [Apps & Integrations]().

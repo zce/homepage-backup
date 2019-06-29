@@ -1,7 +1,7 @@
 ---
 title: Apps & integrations
 date: 2019-06-01T00:00:00.000Z
-feature_image: https://static.ghost.org/v2.0.0/images/app-integrations.jpg
+cover: https://static.ghost.org/v2.0.0/images/app-integrations.jpg
 ---
 
 There are three primary ways to work with third-party services in Ghost: using Zapier, editing your theme, or using the Ghost API.
@@ -22,7 +22,7 @@ Zapier sets up automations with Triggers and Actions, which allows you to create
 
 One of the biggest advantages of using Ghost over centralised platforms is that you have total control over the front end of your site. Either customise your existing theme, or create a new theme from scratch with our [Theme SDK](https://docs.ghost.org/api/handlebars-themes/).
 
-You can integrate *any* front end code into a Ghost theme without restriction, and it will work just fine. No restrictions!
+You can integrate _any_ front end code into a Ghost theme without restriction, and it will work just fine. No restrictions!
 
 **Here are some common examples**:
 

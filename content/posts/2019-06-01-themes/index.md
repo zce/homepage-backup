@@ -1,14 +1,14 @@
 ---
 title: Creating a custom theme
 date: 2019-06-01T00:00:00.000Z
-feature_image: https://static.ghost.org/v2.0.0/images/creating-a-custom-theme.jpg
+cover: https://static.ghost.org/v2.0.0/images/creating-a-custom-theme.jpg
 ---
 
 Ghost comes with a beautiful default theme called Casper, which is designed to be a clean, readable publication layout and can be adapted for most purposes. However, Ghost can also be completely themed to suit your needs. Rather than just giving you a few basic settings which act as a poor proxy for code, we just let you write code.
 
 There are a huge range of both free and premium pre-built themes which you can get from the [Ghost Theme Marketplace](http://marketplace.ghost.org), or you can create your own from scratch.
 
-![](../media/marketplace.jpg)
+![](marketplace.jpg)
 
 Ghost themes are written with a templating language called handlebars, which has a set of dynamic helpers to insert your data into template files. For example: `{{author.name}}` outputs the name of the current author.
 

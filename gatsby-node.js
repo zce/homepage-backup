@@ -4,19 +4,85 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-const { createFilePath } = require('gatsby-source-filesystem')
+const path = require('path')
+const slugify = require('slugify')
+const config = require('./content/config')
 
-exports.createPages = async ({ graphql, actions: { createPage } }) => {
+const getPermalink = (node, permalink) => {
+  if (node.frontmatter.permalink) {
+    return node.frontmatter.permalink
+  }
+
+  // generate permalink if permalink not defined in frontmatter
+  const {
+    title,
+    slug,
+    date,
+    authors: [author] = [],
+    categories: [category] = [],
+    tags: [tag] = []
+  } = node.frontmatter
+
+  const d = new Date(date)
+
+  const context = {
+    slug: slug || slugify(title, { lower: true }),
+    year: d.getFullYear(),
+    month: ('0' + (d.getMonth() + 1)).substr(-2),
+    day: ('0' + d.getDate()).substr(-2),
+    author: author,
+    category: category,
+    tag: tag
+  }
+
+  // replacement
+  for (const key in context) {
+    permalink = permalink.replace(`{${key}}`, context[key])
+  }
+  return permalink
+}
+
+exports.onCreateNode = ({ node, getNode, actions }) => {
+  const { createNodeField } = actions
+
+  if (node.internal.type !== `MarkdownRemark`) return
+
+  // ignore markdown dirname or filename, use frontmatter instead
+  // const permalink =
+  //   createFilePath({ node, getNode, basePath: `posts`, trailingSlash: true })
+
+  const file = getNode(node.parent)
+  const content = config[path.join(file.relativeDirectory, '..')]
+  if (!content) return
+
+  createNodeField({ node, name: `type`, value: content.type })
+
+  const template = node.frontmatter.template || content.template
+  createNodeField({ node, name: `template`, value: template })
+
+  const permalink = getPermalink(node, content.permalink)
+  createNodeField({ node, name: `permalink`, value: permalink })
+}
+
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions
+
   const result = await graphql(`
     query {
       allMarkdownRemark {
         edges {
           node {
+            id
             fields {
-              slug
+              type
+              template
+              permalink
             }
             frontmatter {
               title
+              authors
+              categories
+              tags
             }
           }
         }
@@ -28,26 +94,21 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
     throw result.errors
   }
 
-  const posts = result.data.allMarkdownRemark.edges
+  const { edges } = result.data.allMarkdownRemark
 
-  posts.forEach((item, index) => {
-    const prev = index === posts.length - 1 ? null : posts[index + 1].node
-    const next = index === 0 ? null : posts[index - 1].node
-    createPage({
-      path: `/blog${item.node.fields.slug}`,
-      component: require.resolve(`./src/templates/post.js`),
-      context: { slug: item.node.fields.slug, prev, next }
+  // Create pages based on different content types
+  Object.values(config).map(c => c.type).forEach(type => {
+    const items = edges.filter(e => e.node.fields.type === type)
+    items.forEach((item, index) => {
+      const prev = index === items.length - 1 ? null : items[index + 1].node
+      const next = index === 0 ? null : items[index - 1].node
+      createPage({
+        path: item.node.fields.permalink,
+        component: require.resolve(`./src/templates/${item.node.fields.template}.js`),
+        context: { id: item.node.id, prev, next }
+      })
     })
   })
-}
 
-exports.onCreateNode = ({ node, getNode, actions }) => {
-  if (node.internal.type !== `MarkdownRemark`) return
-  const value = createFilePath({
-    node,
-    getNode,
-    // basePath: `posts`,
-    // trailingSlash: true
-  })
-  actions.createNodeField({ name: `slug`, node, value })
+  // Create pages based on different taxonomies: authors, categories, tags
 }

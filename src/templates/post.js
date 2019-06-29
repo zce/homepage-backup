@@ -2,13 +2,14 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/layout'
+import 'prismjs/themes/prism.css'
 
 export default ({ data, pageContext: { prev, next } }) => (
   <Layout>
     <Helmet title={data.markdownRemark.frontmatter.title} />
     <h1>{data.markdownRemark.frontmatter.title}</h1>
     <img
-      src={data.markdownRemark.frontmatter.feature_image}
+      src={data.markdownRemark.frontmatter.cover}
       alt={data.markdownRemark.frontmatter.title}
     />
     <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
@@ -19,12 +20,12 @@ export default ({ data, pageContext: { prev, next } }) => (
         justifyContent: `space-between`
       }}>
       {prev && (
-        <Link to={`/blog/${prev.fields.slug}`}>
+        <Link to={prev.fields.permalink}>
           &larr; {prev.frontmatter.title}
         </Link>
       )}
       {next && (
-        <Link to={`/blog/${next.fields.slug}`}>
+        <Link to={next.fields.permalink}>
           {next.frontmatter.title} &rarr;
         </Link>
       )}
@@ -35,12 +36,12 @@ export default ({ data, pageContext: { prev, next } }) => (
 )
 
 export const query = graphql`
-  query ($slug: String!) {
-    markdownRemark (fields: { slug: { eq: $slug } }) {
+  query($id: String!) {
+    markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
-        feature_image
+        date(fromNow: true)
+        cover
       }
       excerpt(pruneLength: 160)
       html
