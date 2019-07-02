@@ -25,7 +25,7 @@
     // "explorer.openEditors.visible": 0,
     "breadcrumbs.enabled": false,
     "files.exclude": {
-      ".cache": true,
+      ".cache": false,
       "content": true,
       "node_modules": false,
       "public": true,

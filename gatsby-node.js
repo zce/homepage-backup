@@ -17,7 +17,7 @@ const collections = {
     // {author} - slug of first author, eg. cameron
     // {category} - slug of first category, eg. tutorial
     // {tag} - slug of first tag listed in the post, eg. news
-    permalink: '/posts/{slug}/',
+    permalink: '/posts/{year}/{month}/{slug}/',
     template: 'post'
   },
   pages: {
@@ -222,9 +222,9 @@ exports.createPages = async ({ graphql, actions }) => {
     const items = posts
       // current type posts
       .filter(e => e.node.fields.type === fields.type)
-      // TODO: sort by posted
+      // // TODO: sort by posted date
       // .sort((post1, post2) => {
-      //   console.log(post1.node.frontmatter)
+      //   console.log(new Date(post1.node.frontmatter.date))
       //   return 0
       // })
 

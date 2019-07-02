@@ -24,7 +24,7 @@
   },
   "scripts": {
     "clean": "rimraf .cache public",
-    "format": "prettier --write {src,content}/**/*.{js,jsx,json,md,css}",
+    "format": "prettier --write \"{src,content}/**/*.{js,jsx,json,md,css}\"",
     "develop": "gatsby develop",
     "serve": "gatsby serve",
     "build": "gatsby build",

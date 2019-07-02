@@ -21,7 +21,7 @@ tags:
 
 > 思考：为什么做不到这些呢？
 
-![browser-server](media/browser-server.png)
+![browser-server](browser-server.png)
 
 这些功能的开发最终都卡在一个相同的问题上：所需要的数据存放在服务端，我们无法通过已知的 API 获取到服务端存放的数据。
 
@@ -39,7 +39,7 @@ tags:
 
 AJAX（Asynchronous JavaScript and XML），最早出现在 2005 年的 [Google Suggest](http://google-suggest.tumblr.com/)，是在浏览器端进行网络编程（发送请求、接收响应）的技术方案，它使我们可以通过 JavaScript 直接获取服务端最新的内容而不必重新加载页面。让 Web 更能接近桌面应用的用户体验。
 
-![google-suggest](media/google-suggest.png)
+![google-suggest](google-suggest.png)
 
 ### AJAX 定义
 

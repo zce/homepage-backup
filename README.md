@@ -9,11 +9,36 @@
 ## Todos
 
 - [x] Content pages
-- [ ] Mapping node types - give up
-- [ ] Taxonomy pages
-- [ ] Meta tags
-- [ ] Global style
+- [x] Mapping node types
+- [x] Taxonomy pages
+- [x] Meta tags
 - [ ] SSR Support
+- [ ] Gatsby image
+- [ ] Global style
+
+### Pages
+
+- /
+  + title: Hey Guys, I'm Lei Wang
+  + description: Thoughts, stories and ideas.
+- /blog/
+  + title: All posts - Wang Lei's Personal Website
+  + description: Thoughts, stories and ideas.
+- /{slug}/
+  + title: {title} - Wang Lei's Personal Website
+  + description: {excerpt}
+- /authors/{slug}/
+  + title: {name}'s posts - Wang Lei's Personal Website
+  + description: {description}
+- /categories/{slug}/
+  + title: {name} - Wang Lei's Personal Website
+  + description: {description}
+- /tags/{slug}/
+  + title: {name} - Wang Lei's Personal Website
+  + description: {description}
+- /posts/{slug}/
+  + title: {title} - Wang Lei's Personal Website
+  + description: {excerpt}
 
 ## Deploy
 
@@ -24,6 +49,7 @@
 - https://www.gatsbyjs.org/
 - https://www.gatsbyjs.org/tutorial/
 - https://www.gatsbyjs.org/docs/
+- https://www.gatsbyjs.org/docs/custom-html/
 - https://github.com/fabe/gatsby-universal
 - https://github.com/scttcper/gatsby-casper
 - https://github.com/niklasmtj/gatsby-starter-julia
@@ -34,6 +60,7 @@
 - https://github.com/taniarascia/taniarascia.com
 - https://github.com/fathomlondon/fath.om
 - https://github.com/GatsbyCentral/gatsby-awesome-pagination
+- https://github.com/jlengstorf/marisamorby.com
 
 ## Snippets
 

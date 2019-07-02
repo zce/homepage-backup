@@ -1,13 +1,13 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import { rhythm, scale } from '../utils/typography'
 import Layout from '../components/layout'
+import Meta from '../components/meta'
 import 'prismjs/themes/prism.css'
 
 export default ({ data: { markdownRemark }, pageContext: { prev, next } }) => (
   <Layout>
-    <Helmet title={markdownRemark.frontmatter.title} />
+    <Meta title={markdownRemark.frontmatter.title} permalink={markdownRemark.fields.permalink} />
     <h1>{markdownRemark.frontmatter.title}</h1>
     <p
       style={{
@@ -76,6 +76,9 @@ export default ({ data: { markdownRemark }, pageContext: { prev, next } }) => (
 export const query = graphql`
   query($id: String!) {
     markdownRemark(id: { eq: $id }) {
+      fields {
+        permalink
+      }
       frontmatter {
         title
         date(fromNow: true)

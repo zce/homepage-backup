@@ -6,9 +6,12 @@
 
 module.exports = {
   siteMetadata: {
-    url: `http://localhost:8000/`,
-    title: `Gatsby Starter Blog`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    url: `http://localhost:8000`,
+    lang: 'en',
+    title: `Lei's Personal Website`,
+    slogan: `MAKE IT BETTER!`,
+    description: `Thoughts, stories and ideas.`,
+    cover: `https://img.zce.me/cover/00.jpg`,
     author: {
       name: `Lei Wang`,
       email: `w@zce.me`,

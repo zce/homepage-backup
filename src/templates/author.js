@@ -1,11 +1,46 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 import Layout from '../components/layout'
+import Meta from '../components/meta'
 
-export default ({ pageContext: { slug } }) => (
+export default ({ data: { authorsYaml }, pageContext: { slug } }) => (
   <Layout>
-    <h1>Author {slug}</h1>
+    <Meta title={authorsYaml.id} permalink={authorsYaml.fields.permalink} />
+    <h1>Author {authorsYaml.id}</h1>
   </Layout>
 )
+
+export const query = graphql`
+  query($slug: String!) {
+    authorsYaml(slug: { eq: $slug }) {
+      id
+      slug
+      email
+      avatar
+      cover
+      bio
+      website
+      location
+      social {
+        weibo
+        wechat
+        qq
+        zhihu
+        github
+        medium
+        twitter
+        facebook
+      }
+      meta {
+        title
+        description
+      }
+      fields {
+        permalink
+      }
+    }
+  }
+`
 
 // import React from 'react'
 // import { Helmet } from 'react-helmet'

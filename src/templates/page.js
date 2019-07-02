@@ -1,22 +1,24 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
+import Meta from '../components/meta'
 
-export default ({ data }) => (
+export default ({ data: { markdownRemark } }) => (
   <Layout>
-    <Helmet title={data.markdownRemark.frontmatter.title} />
-    <h1>{data.markdownRemark.frontmatter.title}</h1>
-    <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+    <Meta title={markdownRemark.frontmatter.title} permalink={markdownRemark.fields.permalink} />
+    <h1>{markdownRemark.frontmatter.title}</h1>
+    <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
   </Layout>
 )
 
 export const query = graphql`
   query($id: String!) {
     markdownRemark(id: { eq: $id }) {
+      fields {
+        permalink
+      }
       frontmatter {
         title
-        date(fromNow: true)
         cover
       }
       excerpt(pruneLength: 160)

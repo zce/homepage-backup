@@ -1,11 +1,31 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 import Layout from '../components/layout'
+import Meta from '../components/meta'
 
-export default ({ pageContext: { slug } }) => (
+export default ({ data: { tagsYaml }, pageContext: { slug } }) => (
   <Layout>
-    <h1>Tag {slug}</h1>
+    <Meta title={tagsYaml.id} permalink={tagsYaml.fields.permalink} />
+    <h1>Tag {tagsYaml.id}</h1>
   </Layout>
 )
+
+export const query = graphql`
+  query($slug: String!) {
+    tagsYaml(slug: { eq: $slug }) {
+      id
+      slug
+      description
+      meta {
+        title
+        description
+      }
+      fields {
+        permalink
+      }
+    }
+  }
+`
 
 // import React from 'react'
 // import { Helmet } from 'react-helmet'

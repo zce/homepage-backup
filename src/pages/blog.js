@@ -1,11 +1,11 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/layout'
+import Meta from '../components/meta'
 
 export default ({ data }) => (
   <Layout>
-    <Helmet title={`Posts - Lei Wang – Full-Stack Software Developer`} />
+    <Meta title={`All posts`} permalink={`/blog/`} />
     <h1>{data.allMarkdownRemark.totalCount} Posts</h1>
     <ul>
       {data.allMarkdownRemark.edges.map(({ node }) => (

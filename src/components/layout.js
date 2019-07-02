@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql, useStaticQuery, Link } from 'gatsby'
+import { useStaticQuery, graphql, Link } from 'gatsby'
 import layoutStyles from './layout.module.css'
 
 const ListLink = props => (
@@ -9,17 +9,15 @@ const ListLink = props => (
 )
 
 export default ({ children }) => {
-  const data = useStaticQuery(
-    graphql`
-      query LayoutQuery {
-        site {
-          siteMetadata {
-            title
-          }
+  const data = useStaticQuery(graphql`
+    query LayoutQuery {
+      site {
+        siteMetadata {
+          title
         }
       }
-    `
-  )
+    }
+  `)
 
   return (
     <div className={layoutStyles.container}>
