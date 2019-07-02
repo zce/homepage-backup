@@ -1,0 +1,41 @@
+- id: Gatsby
+  slug: gatsby
+  email: gatsby@zce.me
+  avatar: https://www.gatsbyjs.org/monogram.svg
+  cover: https://img.zce.me/cover/00.jpg
+  bio: Gatsby is a free and open source framework based on React that helps developers build blazing fast websites and apps.
+  website: https://gatsbyjs.org
+  location: Beijing, China
+  social:
+    weibo: zceme
+    wechat: wedn-net
+    qq: 27102514
+    zhihu: zceme
+    github: zce
+    medium: zce
+    twitter: w_zce
+    facebook: zccce
+  meta:
+    title: ''
+    description: ''
+
+- id: Lei Wang
+  slug: zce
+  email: w@zce.me
+  avatar: https://img.zce.me/avatar.jpg
+  cover: https://img.zce.me/cover/00.jpg
+  bio: MAKE IT BETTER!
+  website: https://zce.me
+  location: Beijing, China
+  social:
+    weibo: zceme
+    wechat: wedn-net
+    qq: 27102514
+    zhihu: zceme
+    github: zce
+    medium: zce
+    twitter: w_zce
+    facebook: zccce
+  meta:
+    title: ''
+    description: ''

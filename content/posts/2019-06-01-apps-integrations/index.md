@@ -2,6 +2,8 @@
 title: Apps & integrations
 date: 2019-06-01T00:00:00.000Z
 cover: https://static.ghost.org/v2.0.0/images/app-integrations.jpg
+authors:
+  - Lei Wang
 ---
 
 There are three primary ways to work with third-party services in Ghost: using Zapier, editing your theme, or using the Ghost API.

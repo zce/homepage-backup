@@ -2,6 +2,10 @@
 title: Creating a custom theme
 date: 2019-06-01T00:00:00.000Z
 cover: https://static.ghost.org/v2.0.0/images/creating-a-custom-theme.jpg
+authors:
+  - Lei Wang
+tags:
+  - Getting Started
 ---
 
 Ghost comes with a beautiful default theme called Casper, which is designed to be a clean, readable publication layout and can be adapted for most purposes. However, Ghost can also be completely themed to suit your needs. Rather than just giving you a few basic settings which act as a poor proxy for code, we just let you write code.

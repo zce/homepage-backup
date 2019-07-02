@@ -5,11 +5,13 @@ import Layout from '../components/layout'
 
 export default ({ data }) => (
   <Layout>
-    <Helmet title={`Posts - Lei Wang – Full-Stack Software Developer`} />
+    <Helmet
+      title={`${data.tagsYaml.id}'s Posts - Lei Wang – Full-Stack Software Developer`}
+    />
     <h1>{data.allMarkdownRemark.totalCount} Posts</h1>
     <ul>
       {data.allMarkdownRemark.edges.map(({ node }) => (
-        <li key={node.fields.permalink}>
+        <li key={node.id}>
           <Link to={node.fields.permalink}>{node.frontmatter.title}</Link>
         </li>
       ))}
@@ -18,8 +20,19 @@ export default ({ data }) => (
 )
 
 export const query = graphql`
-  query {
-    allMarkdownRemark(filter: { fields: { type: { eq: "post" } } }) {
+  query($slug: String!) {
+    tagsYaml(slug: { eq: $slug }) {
+      id
+      slug
+      description
+      meta {
+        title
+        description
+      }
+    }
+    allMarkdownRemark(
+      filter: { frontmatter: { tags: { elemMatch: { slug: { eq: $slug } } } } }
+    ) {
       totalCount
       edges {
         node {

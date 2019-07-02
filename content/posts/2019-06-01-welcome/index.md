@@ -3,11 +3,9 @@ title: Welcome to Ghost
 date: 2019-06-01T00:00:00.000Z
 cover: https://static.ghost.org/v2.0.0/images/welcome-to-ghost.jpg
 authors:
-  - zce
-categories:
-  - uncategorized
+  - Lei Wang
 tags:
-  - ghost
+  - Getting Started
 permalink: /blog/welcome
 ---
 

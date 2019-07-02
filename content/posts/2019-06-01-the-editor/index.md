@@ -3,11 +3,9 @@ title: Writing posts with Ghost ✍️
 date: 2019-06-01T00:00:00.000Z
 cover: https://static.ghost.org/v2.0.0/images/writing-posts-with-ghost.jpg
 authors:
-  - zce
-categories:
-  - uncategorized
+  - Lei Wang
 tags:
-  - ghost
+  - Getting Started
 ---
 
 Ghost has a powerful visual editor with familiar formatting options, as well as the ability to seamlessly add dynamic content.

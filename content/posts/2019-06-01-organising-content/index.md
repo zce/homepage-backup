@@ -2,6 +2,8 @@
 title: Organising your content
 date: 2019-06-01T00:00:00.000Z
 cover: https://static.ghost.org/v2.0.0/images/organising-your-content.jpg
+authors:
+  - Lei Wang
 ---
 
 Ghost has a flexible organisational taxonomy called **tags** which can be used to configure your site structure using **dynamic routing**.

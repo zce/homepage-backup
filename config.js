@@ -16,5 +16,15 @@ module.exports = {
     type: 'page',
     permalink: '/{slug}/',
     template: 'page'
+  },
+  authors: {
+    type: 'author',
+    permalink: '/authors/{slug}/',
+    template: 'author'
+  },
+  tags: {
+    type: 'tag',
+    permalink: '/tags/{slug}/',
+    template: 'tag'
   }
 }

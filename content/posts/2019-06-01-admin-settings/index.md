@@ -3,6 +3,8 @@ title: Managing admin settings
 slug: admin-settings
 date: 2019-06-01T00:00:00.000Z
 cover: https://static.ghost.org/v2.0.0/images/admin-settings.jpg
+authors:
+  - Lei Wang
 ---
 
 There are a couple of things to do next while you're getting set up:

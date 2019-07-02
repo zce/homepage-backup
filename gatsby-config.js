@@ -13,16 +13,6 @@ module.exports = {
       name: `Lei Wang`,
       email: `w@zce.me`,
       url: `https://zce.me`
-    },
-    social: {
-      weibo: `zceme`,
-      wechat: `wedn-net`,
-      qq: `27102514`,
-      zhihu: `zceme`,
-      github: `zce`,
-      medium: `zce`,
-      twitter: `w_zce`,
-      facebook: `zccce`
     }
   },
   plugins: [
@@ -63,6 +53,7 @@ module.exports = {
         ]
       }
     },
+    `gatsby-transformer-yaml`,
     `gatsby-transformer-sharp`,
     // plugin
     `gatsby-plugin-sharp`,
@@ -84,6 +75,8 @@ module.exports = {
   ],
   mapping: {
     // https://www.gatsbyjs.org/docs/gatsby-config/#mapping-node-types
-    // "MarkdownRemark.frontmatter.author": `AuthorYaml`,
+    'MarkdownRemark.frontmatter.authors': `AuthorsYaml`,
+    'MarkdownRemark.frontmatter.categories': `CategoriesYaml`,
+    'MarkdownRemark.frontmatter.tags': `TagsYaml`,
   }
 }

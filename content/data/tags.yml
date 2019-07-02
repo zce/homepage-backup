@@ -1,0 +1,15 @@
+- id: Untagged
+  slug: untagged
+  description: Gatsby untagged contents
+  cover: https://images.unsplash.com/photo-1561827028-5a0b44f433bb?fit=crop&w=1280&q=80
+  meta:
+    title: ''
+    description: This is Gatsby untagged contents
+
+- id: Getting Started
+  slug: getting-started
+  description: Gatsby getting started contents
+  cover: https://images.unsplash.com/photo-1561827028-5a0b44f433bb?fit=crop&w=1280&q=80
+  meta:
+    title: ''
+    description: This is Gatsby getting started contents

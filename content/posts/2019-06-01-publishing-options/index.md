@@ -2,6 +2,8 @@
 title: Publishing options
 date: 2019-06-01T00:00:00.000Z
 cover: https://static.ghost.org/v2.0.0/images/publishing-options.jpg
+authors:
+  - Lei Wang
 ---
 
 The Ghost editor has everything you need to fully optimise your content. This is where you can add tags and authors, feature a post, or turn a post into a page.
