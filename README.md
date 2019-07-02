@@ -12,7 +12,7 @@
 - [x] Mapping node types
 - [x] Taxonomy pages
 - [x] Meta tags
-- [ ] Gatsby image
+- [x] Gatsby image
 - [ ] Global style
 - [ ] Local path & Remote url
 - [ ] Cover with absolute url
