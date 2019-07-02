@@ -12,7 +12,6 @@
 - [x] Mapping node types
 - [x] Taxonomy pages
 - [x] Meta tags
-- [ ] SSR Support
 - [ ] Gatsby image
 - [ ] Global style
 
