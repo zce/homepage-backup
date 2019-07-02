@@ -1,7 +1,7 @@
 ---
 title: Publishing options
-date: 2019-06-01T00:00:00.000Z
-cover: https://static.ghost.org/v2.0.0/images/publishing-options.jpg
+date: 2019-06-04T00:00:00.000Z
+cover: publishing-options.jpg
 authors:
   - Lei Wang
 ---

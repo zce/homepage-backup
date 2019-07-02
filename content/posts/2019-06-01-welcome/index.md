@@ -1,7 +1,7 @@
 ---
 title: Welcome to Ghost
 date: 2019-06-01T00:00:00.000Z
-cover: https://static.ghost.org/v2.0.0/images/welcome-to-ghost.jpg
+cover: welcome-to-ghost.jpg
 authors:
   - Lei Wang
 tags:
@@ -28,3 +28,7 @@ The version of Ghost you are looking at right now would not have been made possi
 The main thing you'll want to read about next is probably: [the Ghost editor](). This is where the good stuff happens.
 
 > _By the way, once you're done reading, you can simply delete the default **Ghost** user from your team to remove all of these introductory posts!_
+
+## Image
+
+![](https://static.ghost.org/v2.0.0/images/welcome-to-ghost.jpg)

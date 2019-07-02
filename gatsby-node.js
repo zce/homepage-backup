@@ -153,7 +153,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const result = await graphql(`
     query {
-      allMarkdownRemark {
+      allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}) {
         edges {
           node {
             id
@@ -216,28 +216,17 @@ exports.createPages = async ({ graphql, actions }) => {
 
   // https://www.gatsbyjs.org/docs/adding-pagination/
   // Create pages based on different content types
-  posts.forEach(item => {
-    const { id, fields } = item.node
-
-    const items = posts
-      // current type posts
-      .filter(e => e.node.fields.type === fields.type)
-      // // TODO: sort by posted date
-      // .sort((post1, post2) => {
-      //   console.log(new Date(post1.node.frontmatter.date))
-      //   return 0
-      // })
-
-    const index = items.indexOf(item)
-    const prev = index === items.length - 1 ? null : items[index + 1].node
-    const next = index === 0 ? null : items[index - 1].node
-
-    const template = `./src/templates/${fields.template}.js`
-
-    createPage({
-      path: fields.permalink,
-      component: require.resolve(template),
-      context: { id, prev, next }
+  Object.values(collections).map(c => c.type).forEach(type => {
+    const items = posts.filter(e => e.node.fields.type === type)
+    items.forEach(({ node: { id, fields } }, i) => {
+      const prev = i === items.length - 1 ? null : items[i + 1].node
+      const next = i === 0 ? null : items[i - 1].node
+      const template = `./src/templates/${fields.template}.js`
+      createPage({
+        path: fields.permalink,
+        component: require.resolve(template),
+        context: { id, prev, next }
+      })
     })
   })
 

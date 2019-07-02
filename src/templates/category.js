@@ -5,7 +5,10 @@ import Meta from '../components/meta'
 
 export default ({ data: { categoriesYaml }, pageContext: { slug } }) => (
   <Layout>
-    <Meta title={categoriesYaml.id} permalink={categoriesYaml.fields.permalink} />
+    <Meta
+      title={categoriesYaml.id}
+      permalink={categoriesYaml.fields.permalink}
+    />
     <h1>Category {categoriesYaml.id}</h1>
   </Layout>
 )

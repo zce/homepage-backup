@@ -5,7 +5,10 @@ import Meta from '../components/meta'
 
 export default ({ data: { markdownRemark } }) => (
   <Layout>
-    <Meta title={markdownRemark.frontmatter.title} permalink={markdownRemark.fields.permalink} />
+    <Meta
+      title={markdownRemark.frontmatter.title}
+      permalink={markdownRemark.fields.permalink}
+    />
     <h1>{markdownRemark.frontmatter.title}</h1>
     <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
   </Layout>
@@ -19,7 +22,6 @@ export const query = graphql`
       }
       frontmatter {
         title
-        cover
       }
       excerpt(pruneLength: 160)
       html

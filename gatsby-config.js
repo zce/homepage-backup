@@ -6,7 +6,7 @@
 
 module.exports = {
   siteMetadata: {
-    url: `http://localhost:8000`,
+    url: `http://localhost:8000`, // no trailing slash!
     lang: 'en',
     title: `Lei's Personal Website`,
     slogan: `MAKE IT BETTER!`,
@@ -59,7 +59,7 @@ module.exports = {
     `gatsby-transformer-yaml`,
     `gatsby-transformer-sharp`,
     // plugin
-    `gatsby-plugin-sharp`,
+    // `gatsby-plugin-sharp`, useless?
     {
       resolve: `gatsby-plugin-typography`,
       options: {

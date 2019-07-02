@@ -1,8 +1,8 @@
 ---
 title: Managing admin settings
 slug: admin-settings
-date: 2019-06-01T00:00:00.000Z
-cover: https://static.ghost.org/v2.0.0/images/admin-settings.jpg
+date: 2019-06-07T00:00:00.000Z
+cover: admin-settings.jpg
 authors:
   - Lei Wang
 ---

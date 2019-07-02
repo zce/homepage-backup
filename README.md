@@ -14,6 +14,8 @@
 - [x] Meta tags
 - [ ] Gatsby image
 - [ ] Global style
+- [ ] Local path & Remote url
+- [ ] Cover with absolute url
 
 ### Pages
 
@@ -60,6 +62,7 @@
 - https://github.com/fathomlondon/fath.om
 - https://github.com/GatsbyCentral/gatsby-awesome-pagination
 - https://github.com/jlengstorf/marisamorby.com
+- https://github.com/graysonhicks/gatsby-plugin-remote-images
 
 ## Snippets
 

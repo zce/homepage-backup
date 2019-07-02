@@ -1,7 +1,7 @@
 - id: Uncategorized
   slug: uncategorized
   description: Gatsby Uncategorized contents
-  cover: https://images.unsplash.com/photo-1561827028-5a0b44f433bb?fit=crop&w=1280&q=80
+  cover: uncategorized.jpg
   meta:
     title: ''
     description: This is Gatsby Uncategorized contents

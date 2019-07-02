@@ -1,7 +1,7 @@
 - id: Untagged
   slug: untagged
   description: Gatsby untagged contents
-  cover: https://images.unsplash.com/photo-1561827028-5a0b44f433bb?fit=crop&w=1280&q=80
+  cover: ''
   meta:
     title: ''
     description: ''
@@ -9,7 +9,7 @@
 - id: Getting Started
   slug: getting-started
   description: Gatsby getting started contents
-  cover: https://images.unsplash.com/photo-1561827028-5a0b44f433bb?fit=crop&w=1280&q=80
+  cover: ''
   meta:
     title: ''
     description: ''
@@ -17,7 +17,7 @@
 - id: Tutorial
   slug: tutorial
   description: Gatsby Tutorial contents
-  cover: https://images.unsplash.com/photo-1561827028-5a0b44f433bb?fit=crop&w=1280&q=80
+  cover: ''
   meta:
     title: ''
     description: ''
@@ -25,7 +25,7 @@
 - id: AJAX
   slug: ajax
   description: ''
-  cover: https://images.unsplash.com/photo-1561827028-5a0b44f433bb?fit=crop&w=1280&q=80
+  cover: ''
   meta:
     title: ''
     description: ''

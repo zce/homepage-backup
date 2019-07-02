@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
+import Image from 'gatsby-image'
 import { rhythm, scale } from '../utils/typography'
 import Layout from '../components/layout'
 import Meta from '../components/meta'
@@ -7,7 +8,10 @@ import 'prismjs/themes/prism.css'
 
 export default ({ data: { markdownRemark }, pageContext: { prev, next } }) => (
   <Layout>
-    <Meta title={markdownRemark.frontmatter.title} permalink={markdownRemark.fields.permalink} />
+    <Meta
+      title={markdownRemark.frontmatter.title}
+      permalink={markdownRemark.fields.permalink}
+    />
     <h1>{markdownRemark.frontmatter.title}</h1>
     <p
       style={{
@@ -18,10 +22,7 @@ export default ({ data: { markdownRemark }, pageContext: { prev, next } }) => (
       {markdownRemark.frontmatter.date}
     </p>
     {markdownRemark.frontmatter.cover && (
-      <img
-        src={markdownRemark.frontmatter.cover}
-        alt={markdownRemark.frontmatter.title}
-      />
+      <Image fixed={markdownRemark.frontmatter.cover.childImageSharp.fixed} />
     )}
     <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
     <div>
@@ -82,7 +83,13 @@ export const query = graphql`
       frontmatter {
         title
         date(fromNow: true)
-        cover
+        cover {
+          childImageSharp {
+            fixed(width: 750) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
         tags {
           id
           fields {

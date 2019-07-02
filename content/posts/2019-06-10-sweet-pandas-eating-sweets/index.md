@@ -1,7 +1,6 @@
 ---
 title: Sweet Pandas Eating Sweets
-date: 2019-06-01T00:00:00.000Z
-cover: https://static.ghost.org/v2.0.0/images/publishing-options.jpg
+date: 2019-06-10T00:00:00.000Z
 authors:
   - Lei Wang
 ---

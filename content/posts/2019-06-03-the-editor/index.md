@@ -1,7 +1,7 @@
 ---
 title: Writing posts with Ghost ✍️
-date: 2019-06-01T00:00:00.000Z
-cover: https://static.ghost.org/v2.0.0/images/writing-posts-with-ghost.jpg
+date: 2019-06-03T00:00:00.000Z
+cover: writing-posts-with-ghost.jpg
 authors:
   - Lei Wang
 tags:
