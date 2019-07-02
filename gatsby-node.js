@@ -6,7 +6,45 @@
 
 const path = require('path')
 const slugify = require('slugify')
-const config = require('./config')
+
+const collections = {
+  posts: {
+    type: 'post',
+    // {slug} - the post slug, eg. my-post
+    // {year} - publication year, eg. 2019
+    // {month} - publication month, eg. 04
+    // {day} - publication day, eg. 29
+    // {author} - slug of first author, eg. cameron
+    // {category} - slug of first category, eg. tutorial
+    // {tag} - slug of first tag listed in the post, eg. news
+    permalink: '/posts/{slug}/',
+    template: 'post'
+  },
+  pages: {
+    type: 'page',
+    permalink: '/{slug}/',
+    template: 'page'
+  }
+}
+
+const taxonomies = {
+  authors: {
+    type: 'author',
+    // {slug} - the author slug, eg. tom-jerry
+    permalink: '/authors/{slug}/',
+    template: 'author'
+  },
+  categories: {
+    type: 'category',
+    permalink: '/categories/{slug}/',
+    template: 'category'
+  },
+  tags: {
+    type: 'tag',
+    permalink: '/tags/{slug}/',
+    template: 'tag'
+  }
+}
 
 const generatePermalink = (permalink, context) => {
   // // replacement
@@ -23,17 +61,15 @@ const generatePermalink = (permalink, context) => {
 const createMarkdownField = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
 
-  // ignore markdown dirname or filename, use frontmatter instead
+  // ignore markdown dirname or filename, use frontmatter slug instead
   // const permalink = createFilePath({ node, getNode, basePath: `posts` })
 
   const file = getNode(node.parent)
-  const collection = config[path.dirname(file.relativeDirectory)]
-  if (!collection) return
+  //
+  const config = collections[path.dirname(file.relativeDirectory)]
+  if (!config) return
 
-  createNodeField({ node, name: `type`, value: collection.type })
-
-  const template = node.frontmatter.template || collection.template
-  createNodeField({ node, name: `template`, value: template })
+  const template = node.frontmatter.template || config.template
 
   const getPermalink = () => {
     if (node.frontmatter.permalink) {
@@ -65,8 +101,11 @@ const createMarkdownField = ({ node, getNode, actions }) => {
       tag: tag
     }
 
-    return generatePermalink(collection.permalink, context)
+    return generatePermalink(config.permalink, context)
   }
+
+  createNodeField({ node, name: `type`, value: config.type })
+  createNodeField({ node, name: `template`, value: template })
   createNodeField({ node, name: `permalink`, value: getPermalink() })
 }
 
@@ -74,13 +113,10 @@ const createYamlField = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
 
   const file = getNode(node.parent)
-  const taxonomy = config[path.basename(file.base, file.ext)]
-  if (!taxonomy) return
+  const config = taxonomies[path.basename(file.base, file.ext)]
+  if (!config) return
 
-  createNodeField({ node, name: `type`, value: taxonomy.type })
-
-  const template = node.template || taxonomy.template
-  createNodeField({ node, name: `template`, value: template })
+  const template = node.template || config.template
 
   const getPermalink = () => {
     if (node.permalink) {
@@ -92,8 +128,11 @@ const createYamlField = ({ node, getNode, actions }) => {
       slug: node.slug || slugify(node.name, { lower: true })
     }
 
-    return generatePermalink(taxonomy.permalink, context)
+    return generatePermalink(config.permalink, context)
   }
+
+  createNodeField({ node, name: `type`, value: config.type })
+  createNodeField({ node, name: `template`, value: template })
   createNodeField({ node, name: `permalink`, value: getPermalink() })
 }
 
@@ -102,6 +141,7 @@ exports.onCreateNode = args => {
     case `MarkdownRemark`:
       return createMarkdownField(args)
     case `AuthorsYaml`:
+    case `CategoriesYaml`:
     case `TagsYaml`:
       return createYamlField(args)
   }
@@ -124,11 +164,24 @@ exports.createPages = async ({ graphql, actions }) => {
             }
             frontmatter {
               title
+              date
             }
           }
         }
       }
       allAuthorsYaml {
+        edges {
+          node {
+            slug
+            fields {
+              type
+              template
+              permalink
+            }
+          }
+        }
+      }
+      allCategoriesYaml {
         edges {
           node {
             slug
@@ -165,8 +218,15 @@ exports.createPages = async ({ graphql, actions }) => {
   // Create pages based on different content types
   posts.forEach(item => {
     const { id, fields } = item.node
-    // current type posts
-    const items = posts.filter(e => e.node.fields.type === fields.type)
+
+    const items = posts
+      // current type posts
+      .filter(e => e.node.fields.type === fields.type)
+      // TODO: sort by posted
+      // .sort((post1, post2) => {
+      //   console.log(post1.node.frontmatter)
+      //   return 0
+      // })
 
     const index = items.indexOf(item)
     const prev = index === items.length - 1 ? null : items[index + 1].node
@@ -183,11 +243,12 @@ exports.createPages = async ({ graphql, actions }) => {
 
   // https://www.gatsbyjs.org/docs/adding-tags-and-categories-to-blog-posts/
   const { edges: authors } = result.data.allAuthorsYaml
+  const { edges: categories } = result.data.allCategoriesYaml
   const { edges: tags } = result.data.allTagsYaml
-  const taxonomies = [].concat(authors, tags)
+  const meta = [].concat(authors, categories, tags)
 
   // Create taxonomies pages
-  taxonomies.forEach(item  => {
+  meta.forEach(item  => {
     const { slug, fields } = item.node
     const template = `./src/templates/${fields.template}.js`
     createPage({

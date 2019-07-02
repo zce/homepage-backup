@@ -3,7 +3,7 @@ import Layout from '../components/layout'
 
 export default ({ pageContext: { slug } }) => (
   <Layout>
-    <h1>Author {slug}</h1>
+    <h1>Category {slug}</h1>
   </Layout>
 )
 
@@ -15,7 +15,7 @@ export default ({ pageContext: { slug } }) => (
 // export default ({ data }) => (
 //   <Layout>
 //     <Helmet
-//       title={`${data.authorsYaml.id}'s Posts - Lei Wang – Full-Stack Software Developer`}
+//       title={`${data.categoriesYaml.id}'s Posts - Lei Wang – Full-Stack Software Developer`}
 //     />
 //     <h1>{data.allMarkdownRemark.totalCount} Posts</h1>
 //     <ul>
@@ -30,34 +30,17 @@ export default ({ pageContext: { slug } }) => (
 
 // export const query = graphql`
 //   query($slug: String!) {
-//     authorsYaml(slug: { eq: $slug }) {
+//     categoriesYaml(slug: { eq: $slug }) {
 //       id
 //       slug
-//       email
-//       avatar
-//       cover
-//       bio
-//       website
-//       location
-//       social {
-//         weibo
-//         wechat
-//         qq
-//         zhihu
-//         github
-//         medium
-//         twitter
-//         facebook
-//       }
+//       description
 //       meta {
 //         title
 //         description
 //       }
 //     }
 //     allMarkdownRemark(
-//       filter: {
-//         frontmatter: { authors: { elemMatch: { slug: { eq: $slug } } } }
-//       }
+//       filter: { frontmatter: { categories: { elemMatch: { slug: { eq: $slug } } } } }
 //     ) {
 //       totalCount
 //       edges {

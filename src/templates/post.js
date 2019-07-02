@@ -17,25 +17,29 @@ export default ({ data: { markdownRemark }, pageContext: { prev, next } }) => (
       }}>
       {markdownRemark.frontmatter.date}
     </p>
-    <img
-      src={markdownRemark.frontmatter.cover}
-      alt={markdownRemark.frontmatter.title}
-    />
+    {markdownRemark.frontmatter.cover && (
+      <img
+        src={markdownRemark.frontmatter.cover}
+        alt={markdownRemark.frontmatter.title}
+      />
+    )}
     <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
     <div>
-      <ul
-        style={{
-          display: `flex`,
-          flexWrap: `wrap`,
-          listStyle: `none`,
-          padding: 0
-        }}>
-        {markdownRemark.frontmatter.tags.map(tag => (
-          <li key={tag.id}>
-            <Link to={tag.fields.permalink}>{tag.id}</Link>
-          </li>
-        ))}
-      </ul>
+      {markdownRemark.frontmatter.tags && (
+        <ul
+          style={{
+            display: `flex`,
+            flexWrap: `wrap`,
+            listStyle: `none`,
+            padding: 0
+          }}>
+          {markdownRemark.frontmatter.tags.map(tag => (
+            <li key={tag.id}>
+              <Link to={tag.fields.permalink}>{tag.id}</Link>,
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
     <hr
       style={{
