@@ -6,7 +6,7 @@
 
 module.exports = {
   siteMetadata: {
-    url: `http://localhost:8000`, // no trailing slash!
+    siteUrl: `http://localhost:8000`, // no trailing slash!
     lang: 'en',
     title: `Lei's Personal Website`,
     slogan: `MAKE IT BETTER!`,
@@ -74,6 +74,7 @@ module.exports = {
         showSpinner: false
       }
     },
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-offline`
   ],
   mapping: {

@@ -18,7 +18,7 @@ export default props => {
     query {
       site {
         siteMetadata {
-          url
+          siteUrl
           lang
           title
           slogan
@@ -33,12 +33,12 @@ export default props => {
     }
   `)
 
-  const url = site.url + (props.permalink || '')
+  const url = site.siteUrl + (props.permalink || '')
   const defaultTitle = `${site.title} | ${site.slogan}`
   const title = props.title ? `${props.title} - ${defaultTitle}` : defaultTitle
   const description = props.description || site.description
   const img = props.image || site.cover
-  const image = img.startsWith('http') ? img : site.url + img
+  const image = img.startsWith('http') ? img : site.siteUrl + img
 
   return (
     <Helmet>

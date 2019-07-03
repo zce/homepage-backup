@@ -13,7 +13,10 @@
 - [x] Taxonomy pages
 - [x] Meta tags
 - [x] Gatsby image
+- [x] Sitemap support
+- [ ] RSS Feed
 - [ ] Global style
+- [ ] Comments
 - [ ] Local path & Remote url
 - [ ] Cover with absolute url
 
