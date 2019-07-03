@@ -74,6 +74,7 @@ module.exports = {
         showSpinner: false
       }
     },
+    // `gatsby-plugin-feed`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-offline`
   ],

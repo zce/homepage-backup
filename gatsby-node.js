@@ -107,6 +107,8 @@ const createMarkdownField = ({ node, getNode, actions }) => {
   createNodeField({ node, name: `type`, value: config.type })
   createNodeField({ node, name: `template`, value: template })
   createNodeField({ node, name: `permalink`, value: getPermalink() })
+  // for RSS Feed
+  // createNodeField({ node, name: `slug`, value: getPermalink() })
 }
 
 const createYamlField = ({ node, getNode, actions }) => {

@@ -14,7 +14,7 @@
 - [x] Meta tags
 - [x] Gatsby image
 - [x] Sitemap support
-- [ ] RSS Feed
+- [x] RSS Feed (not enabled)
 - [ ] Global style
 - [ ] Comments
 - [ ] Local path & Remote url
