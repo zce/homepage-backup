@@ -1,14 +1,15 @@
 import React from 'react'
-import Layout from '../components/layout'
-import Meta from '../components/meta'
+import styled from 'styled-components'
+import { Layout } from '../components'
+import { scale } from '../utils/typography'
+
+const Text = styled.p`
+  ${scale(1)}
+  color: red;
+`
 
 export default () => (
   <Layout>
-    <Meta />
-    <h1>Hi! I'm building a fake Gatsby site as part of a tutorial!</h1>
-    <p>
-      What do I like to do? Lots of course but definitely enjoy building
-      websites.
-    </p>
+    <Text>hello world</Text>
   </Layout>
 )

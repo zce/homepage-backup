@@ -1,3 +1,10 @@
-html {
-  background-color: #f8f9fb;
+body {
+  border: 0.5rem solid #e6e6e6;
+  min-height: 100vh;
+}
+
+@media (min-width: 580px) {
+  body {
+    border-width: 1rem;
+  }
 }

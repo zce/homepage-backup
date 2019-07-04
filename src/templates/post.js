@@ -4,7 +4,7 @@ import Image from 'gatsby-image'
 import { rhythm, scale } from '../utils/typography'
 import Layout from '../components/layout'
 import Meta from '../components/meta'
-import 'prismjs/themes/prism.css'
+import '../styles/prism.css'
 
 export default ({ data: { markdownRemark }, pageContext: { prev, next } }) => (
   <Layout>

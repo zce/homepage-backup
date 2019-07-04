@@ -17,7 +17,8 @@ const collections = {
     // {author} - slug of first author, eg. cameron
     // {category} - slug of first category, eg. tutorial
     // {tag} - slug of first tag listed in the post, eg. news
-    permalink: '/posts/{year}/{month}/{slug}/',
+    // permalink: '/posts/{slug}/',
+    permalink: '/{year}/{month}/{slug}/',
     template: 'post'
   },
   pages: {

@@ -60,13 +60,13 @@ module.exports = {
     `gatsby-transformer-sharp`,
     // plugin
     // `gatsby-plugin-sharp`, useless?
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography`
       }
     },
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-nprogress`,
       options: {

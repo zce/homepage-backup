@@ -1,16 +1,24 @@
+/**
+ * https://github.com/KyleAMathews/typography.js
+ *
+ * Themes:
+ * - typography-theme-fairy-gates
+ * - typography-theme-funston
+ */
+
 import Typography from 'typography'
-import fairyGateTheme from 'typography-theme-fairy-gates'
+import theme from 'typography-theme-moraga'
+import CodePlugin from 'typography-plugin-code'
 
-// fairyGateTheme.baseFontSize = '12px'
-const overrideStyles = fairyGateTheme.overrideStyles
-fairyGateTheme.overrideStyles = (...args) => {
-  const styles = overrideStyles(...args)
-  delete styles.a.backgroundImage
-  return styles
-}
+theme.plugins = [new CodePlugin()]
 
-// Fairy Gatesn Theme https://github.com/KyleAMathews/typography.js/blob/master/packages/typography-theme-fairy-gates/src/index.js
-const typography = new Typography(fairyGateTheme)
+// theme.baseFontSize = '16px'
+// const themeOverride = theme.overrideStyles
+// theme.overrideStyles = (...args) => {
+//   return themeOverride(...args)
+// }
+
+const typography = new Typography(theme)
 
 export const { scale, rhythm, options } = typography
 

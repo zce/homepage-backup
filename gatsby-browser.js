@@ -4,6 +4,7 @@
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
 
+// TODO: Use CSS-in-JS instead?
 import './src/styles/global.css'
 
 // or:

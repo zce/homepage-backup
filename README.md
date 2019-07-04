@@ -16,7 +16,13 @@
 - [x] Sitemap support
 - [x] RSS Feed (not enabled)
 - [ ] Global style
+  + https://www.gatsbyjs.org/docs/emotion/
+  + https://www.gatsbyjs.org/docs/styled-components/
+  + https://www.gatsbyjs.org/docs/css-libraries-and-frameworks/
+  + https://github.com/KyleAMathews/typography.js
 - [ ] Comments
+- [ ] Sass?
+- [ ] Theming
 - [ ] Local path & Remote url
 - [ ] Cover with absolute url
 
@@ -63,6 +69,8 @@
 - https://github.com/prichey/prestonrichey.com
 - https://github.com/taniarascia/taniarascia.com
 - https://github.com/fathomlondon/fath.om
+- https://github.com/LekoArts/gatsby-starter-prismic
+
 - https://github.com/GatsbyCentral/gatsby-awesome-pagination
 - https://github.com/jlengstorf/marisamorby.com
 - https://github.com/graysonhicks/gatsby-plugin-remote-images
