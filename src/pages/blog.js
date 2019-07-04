@@ -1,11 +1,10 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
-import Layout from '../components/layout'
-import Meta from '../components/meta'
 
-export default ({ data }) => (
-  <Layout>
-    <Meta title={`All posts`} permalink={`/blog/`} />
+import { Layout } from '../components'
+
+export default ({ data, location }) => (
+  <Layout title={`All posts`} location={location}>
     <h1>{data.allMarkdownRemark.totalCount} Posts</h1>
     <ul>
       {data.allMarkdownRemark.edges.map(({ node }) => (

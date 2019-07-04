@@ -1,10 +1,9 @@
 import React from 'react'
-import Meta from '../components/meta'
+import { Layout } from '../components'
 
-export default () => (
-  <div>
-    <Meta title={`404 Not Found`} />
+export default ({ location }) => (
+  <Layout title="404 Not found" location={location}>
     <h1>404</h1>
     <p>Not found</p>
-  </div>
+  </Layout>
 )

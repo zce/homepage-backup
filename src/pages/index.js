@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+
 import { Layout } from '../components'
 import { scale } from '../utils/typography'
 
@@ -8,8 +9,8 @@ const Text = styled.p`
   color: red;
 `
 
-export default () => (
-  <Layout>
+export default ({ location }) => (
+  <Layout location={location}>
     <Text>hello world</Text>
   </Layout>
 )

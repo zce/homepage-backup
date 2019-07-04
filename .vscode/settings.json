@@ -1,0 +1,12 @@
+{
+  // "explorer.openEditors.visible": 0,
+  "breadcrumbs.enabled": false,
+  "editor.fontSize": 13,
+  "files.exclude": {
+    ".cache": true,
+    "node_modules": true,
+    "public": true,
+    "yarn.lock": true
+  },
+  "workbench.editor.showTabs": false
+}

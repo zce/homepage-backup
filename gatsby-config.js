@@ -4,19 +4,13 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
+const { metadata } = require('./config')
+
 module.exports = {
   siteMetadata: {
-    siteUrl: `http://localhost:8000`, // no trailing slash!
-    lang: 'en',
-    title: `Lei's Personal Website`,
-    slogan: `MAKE IT BETTER!`,
-    description: `Thoughts, stories and ideas.`,
-    cover: `https://img.zce.me/cover/00.jpg`,
-    author: {
-      name: `Lei Wang`,
-      email: `w@zce.me`,
-      url: `https://zce.me`
-    }
+    ...metadata,
+    // for gatsby-plugin-sitemap
+    siteUrl: metadata.url
   },
   plugins: [
     // source
@@ -78,6 +72,8 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-offline`
   ],
+  // https://www.gatsbyjs.org/docs/path-prefix/
+  // pathPrefix: '',
   mapping: {
     // https://www.gatsbyjs.org/docs/gatsby-config/#mapping-node-types
     'MarkdownRemark.frontmatter.authors': `AuthorsYaml`,

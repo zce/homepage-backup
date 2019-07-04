@@ -16,39 +16,11 @@
 - [x] Sitemap support
 - [x] RSS Feed (not enabled)
 - [ ] Global style
-  + https://www.gatsbyjs.org/docs/emotion/
-  + https://www.gatsbyjs.org/docs/styled-components/
-  + https://www.gatsbyjs.org/docs/css-libraries-and-frameworks/
-  + https://github.com/KyleAMathews/typography.js
 - [ ] Comments
 - [ ] Sass?
 - [ ] Theming
 - [ ] Local path & Remote url
 - [ ] Cover with absolute url
-
-### Pages
-
-- /
-  + title: Hey Guys, I'm Lei Wang
-  + description: Thoughts, stories and ideas.
-- /blog/
-  + title: All posts - Wang Lei's Personal Website
-  + description: Thoughts, stories and ideas.
-- /{slug}/
-  + title: {title} - Wang Lei's Personal Website
-  + description: {excerpt}
-- /authors/{slug}/
-  + title: {name}'s posts - Wang Lei's Personal Website
-  + description: {description}
-- /categories/{slug}/
-  + title: {name} - Wang Lei's Personal Website
-  + description: {description}
-- /tags/{slug}/
-  + title: {name} - Wang Lei's Personal Website
-  + description: {description}
-- /posts/{slug}/
-  + title: {title} - Wang Lei's Personal Website
-  + description: {excerpt}
 
 ## Deploy
 
@@ -56,21 +28,26 @@
 
 ## References
 
-- https://www.gatsbyjs.org/
-- https://www.gatsbyjs.org/tutorial/
-- https://www.gatsbyjs.org/docs/
-- https://www.gatsbyjs.org/docs/custom-html/
+- https://github.com/prichey/prestonrichey.com
+- https://github.com/taniarascia/taniarascia.com
+- https://github.com/fathomlondon/fath.om
 - https://github.com/fabe/gatsby-universal
+- https://github.com/LekoArts/gatsby-starter-prismic
+- https://github.com/LekoArts/gatsby-starter-portfolio-cara
 - https://github.com/scttcper/gatsby-casper
 - https://github.com/niklasmtj/gatsby-starter-julia
 - https://github.com/dvzrd/gatsby-sfiction
 - https://github.com/Vagr9K/gatsby-advanced-starter
 - https://github.com/greglobinski/gatsby-starter-personal-blog
-- https://github.com/prichey/prestonrichey.com
-- https://github.com/taniarascia/taniarascia.com
-- https://github.com/fathomlondon/fath.om
-- https://github.com/LekoArts/gatsby-starter-prismic
 
+- https://www.gatsbyjs.org/
+- https://www.gatsbyjs.org/tutorial/
+- https://www.gatsbyjs.org/docs/
+- https://www.gatsbyjs.org/docs/custom-html/
+- https://www.gatsbyjs.org/docs/emotion/
+- https://www.gatsbyjs.org/docs/styled-components/
+- https://www.gatsbyjs.org/docs/css-libraries-and-frameworks/
+- https://github.com/KyleAMathews/typography.js
 - https://github.com/GatsbyCentral/gatsby-awesome-pagination
 - https://github.com/jlengstorf/marisamorby.com
 - https://github.com/graysonhicks/gatsby-plugin-remote-images

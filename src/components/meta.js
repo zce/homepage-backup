@@ -11,14 +11,13 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 
-export default props => {
+export default ({ title, description, image, location, children }) => {
   const {
     site: { siteMetadata: site }
   } = useStaticQuery(graphql`
     query {
       site {
         siteMetadata {
-          siteUrl
           lang
           title
           slogan
@@ -33,12 +32,15 @@ export default props => {
     }
   `)
 
-  const url = site.siteUrl + (props.permalink || '')
-  const defaultTitle = `${site.title} | ${site.slogan}`
-  const title = props.title ? `${props.title} - ${defaultTitle}` : defaultTitle
-  const description = props.description || site.description
-  const img = props.image || site.cover
-  const image = img.startsWith('http') ? img : site.siteUrl + img
+  const url = location.origin + location.pathname
+
+  const suffix = `${site.title} | ${site.slogan}`
+  title = title ? `${title} - ${suffix}` : suffix
+
+  description = description || site.description
+
+  const img = image || site.cover
+  image = img.startsWith('http') ? img : location.origin + img
 
   return (
     <Helmet>
@@ -56,7 +58,7 @@ export default props => {
       {/* TODO: website or article? http://ogp.me/#no_vertical */}
       <meta property="og:type" content={`website`} />
       {/* TODO: Twitter & Fackbook Card tags? */}
-      {props.children}
+      {children}
       <link rel="canonical" href={url} />
     </Helmet>
   )

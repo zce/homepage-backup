@@ -1,0 +1,18 @@
+{
+	"Page component": {
+		"scope": "javascript",
+		"prefix": "page",
+		"body": [
+			"import React from 'react'",
+      "",
+      "import { Layout } from '../components'",
+      "",
+      "export default ({ location }) => (",
+      "  <Layout title=\"${1:Page}\" location={location}>",
+      "    <h1>${1:Page}</h1>",
+      "  </Layout>",
+      ")"
+		],
+		"description": "Page component"
+	}
+}
