@@ -7,7 +7,7 @@ export default ({ author }) => (
     <p
       style={{
         margin: 0,
-        textAlign: center,
+        textAlign: 'center',
         color: options.colors.muted
       }}>
       &copy; {new Date().getFullYear()} by{' '}

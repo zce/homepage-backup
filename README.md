@@ -26,6 +26,8 @@
 - [ ] Local path & Remote url
 - [ ] Cover with absolute url
 - [ ] SSR Support
+- [ ] Create default nodes by programming
+- [ ] Global state
 
 ## Deploy
 
