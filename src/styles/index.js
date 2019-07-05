@@ -11,6 +11,7 @@ import sample from './sample'
 import * as theme from './theme'
 
 // load module styles as plugin
+// TODO: plugin toolbox
 theme.options.plugins = [global, code, sample]
 
 const styles = new Typography(theme.options)

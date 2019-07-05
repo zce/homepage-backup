@@ -1,6 +1,6 @@
 ---
 title: Apps & integrations
-date: 2019-06-06T00:00:00.000Z
+date: 2019-06-06 00:00:00
 cover: app-integrations.jpg
 authors:
   - Lei Wang

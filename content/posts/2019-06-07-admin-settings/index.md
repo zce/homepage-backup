@@ -1,7 +1,7 @@
 ---
 title: Managing admin settings
 slug: admin-settings
-date: 2019-06-07T00:00:00.000Z
+date: 2019-06-07 00:00:00
 cover: admin-settings.jpg
 authors:
   - Lei Wang

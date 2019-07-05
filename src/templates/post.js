@@ -1,9 +1,10 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Image from 'gatsby-image'
+import moment from 'moment'
 
 import Layout from '../components/layout'
-import { rhythm, scale } from '../styles'
+import { options, rhythm } from '../styles'
 
 export default ({ data, pageContext, location }) => {
   const { markdownRemark: post } = data
@@ -15,21 +16,29 @@ export default ({ data, pageContext, location }) => {
       title={meta.title}
       description={meta.description || post.excerpt}
       location={location}>
-      <header
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center'
-        }}>
-        <time style={{ ...scale(-1 / 5) }}>{meta.date}</time>
-        <h1>{meta.title}</h1>
-        {meta.cover && (
-          <Image
-            style={{ marginBottom: rhythm(1) }}
-            fixed={meta.cover.childImageSharp.fixed}
-          />
-        )}
+      <header style={{ textAlign: 'center' }}>
+        <time
+          style={{ textTransform: 'uppercase' }}
+          dateTime={meta.date}
+          pubdate>
+          {moment.utc(meta.date).format('MMMM Do, YYYY')}
+        </time>
+        <h1 style={{ marginTop: rhythm(0.5), fontWeight: options.boldWeight }}>
+          {meta.title}
+        </h1>
       </header>
+      {meta.cover && (
+        <Image
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            marginBottom: rhythm(1)
+          }}
+          fixed={meta.cover.childImageSharp.fixed}
+          Tag="figure"
+        />
+      )}
       <main>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <div>

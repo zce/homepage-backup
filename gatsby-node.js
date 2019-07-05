@@ -7,7 +7,51 @@
 const path = require('path')
 const slugify = require('slugify')
 
-const { collections, taxonomies } = require('./config')
+/**
+ * collections permalink tags:
+ * - {slug} - the post slug, eg. my-post
+ * - {year} - publication year, eg. 2019
+ * - {month} - publication month, eg. 04
+ * - {day} - publication day, eg. 29
+ * - {author} - slug of first author, eg. cameron
+ * - {category} - slug of first category, eg. tutorial
+ * - {tag} - slug of first tag listed in the post, eg. news
+ */
+const collections = {
+  posts: {
+    type: 'post',
+    permalink: '/{year}/{month}/{slug}/',
+    template: 'post'
+  },
+  pages: {
+    type: 'page',
+    permalink: '/{slug}/',
+    template: 'page'
+  }
+}
+
+/**
+ * taxonomies permalink tags:
+ * - {slug} - the taxonomy slug, eg. tom-jerry
+ */
+const taxonomies = {
+  authors: {
+    type: 'author',
+    permalink: '/authors/{slug}/',
+    template: 'author'
+  },
+  categories: {
+    type: 'category',
+    permalink: '/categories/{slug}/',
+    template: 'category'
+  },
+  tags: {
+    type: 'tag',
+    permalink: '/tags/{slug}/',
+    template: 'tag'
+  }
+}
+
 
 const generatePermalink = (permalink, context) => {
   // // replacement

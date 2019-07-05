@@ -10,16 +10,15 @@ export const useMetadata = () =>
     query {
       site {
         siteMetadata {
+          url
           title
           slogan
           description
+          keywords
           logo
           cover
-          author {
-            name
-            email
-            url
-          }
+          author
+          language
           menus {
             text
             link

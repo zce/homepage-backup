@@ -1,6 +1,6 @@
 ---
 title: Publishing options
-date: 2019-06-04T00:00:00.000Z
+date: 2019-06-04 00:00:00
 cover: publishing-options.jpg
 authors:
   - Lei Wang

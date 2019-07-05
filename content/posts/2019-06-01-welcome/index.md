@@ -1,6 +1,6 @@
 ---
 title: Welcome to Ghost
-date: 2019-06-01T00:00:00.000Z
+date: 2019-06-01 22:47:36
 cover: welcome-to-ghost.jpg
 authors:
   - Lei Wang

@@ -10,6 +10,16 @@
 
 <!-- TODO -->
 
+## Pages
+
+- index
+- blog
+- archives
+- authors
+- categories
+- tags
+- 404
+
 ## Todos
 
 - [x] Content pages
@@ -27,7 +37,8 @@
 - [ ] Cover with absolute url
 - [ ] SSR Support
 - [ ] Create default nodes by programming
-- [ ] Global state
+- [ ] Global State
+- [ ] Category Hierarchy
 
 ## Deploy
 
@@ -71,30 +82,4 @@ const getList = prop => {
     .reduce((a, i) => a.concat(i), [])
   return [...new Set(allList)]
 }
-
-const authors = getList('authors')
-console.log(authors)
-
-const categories = getList('categories')
-console.log(categories)
-
-const tags = getList('tags')
-console.log(tags)
-```
-
-```js
-// Create pages based on different content types
-Object.values(config).map(c => c.type).forEach(type => {
-  const items = edges.filter(e => e.node.fields.type === type)
-  items.forEach(({ node }, i) => {
-    const prev = i === items.length - 1 ? null : items[i + 1].node
-    const next = i === 0 ? null : items[i - 1].node
-    const template = `./src/templates/${node.fields.template}.js`
-    createPage({
-      path: node.fields.permalink,
-      component: require.resolve(template),
-      context: { id: node.id, prev, next }
-    })
-  })
-})
 ```

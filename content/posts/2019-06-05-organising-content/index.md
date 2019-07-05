@@ -1,6 +1,6 @@
 ---
 title: Organising your content
-date: 2019-06-05T00:00:00.000Z
+date: 2019-06-05 00:00:00
 cover: organising-your-content.jpg
 authors:
   - Lei Wang

@@ -17,14 +17,14 @@ import { colors, options, rhythm, scale } from '../styles'
 
 const wrapperStyle = {
   margin: '0 auto',
-  padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+  padding: `0 ${rhythm(1.25)}`,
   maxWidth: rhythm(30)
 }
 
 export default ({ title, description, image, location, children }) => {
   const site = useMetadata()
 
-  const url = location.origin + location.pathname
+  const url = site.url + location.pathname
 
   const suffix = `${site.title} | ${site.slogan}`
   title = title ? `${title} - ${suffix}` : suffix
@@ -32,16 +32,17 @@ export default ({ title, description, image, location, children }) => {
   description = description || site.description
 
   const img = image || site.cover
-  image = img.startsWith('http') ? img : location.origin + img
+  image = img.startsWith('http') ? img : site.url + img
+
+  const year = new Date().getFullYear()
 
   return (
     <div style={wrapperStyle}>
       <Helmet>
-        <html lang={site.lang} />
+        <html lang={site.language} />
         <title>{title}</title>
         <meta name="description" content={description} />
-        <meta name="author" content={site.author.name} />
-        <meta name="email" content={site.author.email} />
+        <meta name="author" content={site.author} />
         {/* OpenGraph tags */}
         <meta property="og:site_name" content={site.title} />
         <meta property="og:url" content={url} />
@@ -54,7 +55,7 @@ export default ({ title, description, image, location, children }) => {
         <link rel="canonical" href={url} />
       </Helmet>
 
-      <header style={{ marginBottom: rhythm(1) }}>
+      <header style={{ marginBottom: rhythm(1), padding: `${rhythm(1.5)} 0` }}>
         <nav
           style={{
             display: 'flex',
@@ -93,8 +94,7 @@ export default ({ title, description, image, location, children }) => {
             textAlign: 'center',
             color: colors.muted
           }}>
-          &copy; {new Date().getFullYear()} by{' '}
-          <a href={site.author.url}>{site.author.name}</a>, Built with{' '}
+          &copy; {year} by {site.author}, Built with{' '}
           <a
             href="https://gatsbyjs.org"
             target="_blank"

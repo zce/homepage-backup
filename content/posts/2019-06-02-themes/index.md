@@ -1,6 +1,6 @@
 ---
 title: Creating a custom theme
-date: 2019-06-02T00:00:00.000Z
+date: 2019-06-02 00:00:00
 cover: creating-a-custom-theme.jpg
 authors:
   - Lei Wang
