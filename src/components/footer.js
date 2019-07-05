@@ -1,7 +1,19 @@
 import React from 'react'
+import styled from 'styled-components'
+
+import { rhythm } from '../styles/typography'
+
+const Footer = styled.footer`
+  padding: ${rhythm(1)} 0;
+
+  p {
+    margin: 0;
+    text-align: center;
+  }
+`
 
 export default ({ author }) => (
-  <footer>
+  <Footer>
     <p>
       &copy; {new Date().getFullYear()} by{' '}
       <a href={author.url}>{author.name}</a>, Built with{' '}
@@ -17,5 +29,5 @@ export default ({ author }) => (
       </a>
       .
     </p>
-  </footer>
+  </Footer>
 )

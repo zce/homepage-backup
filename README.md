@@ -6,6 +6,10 @@
 
 <!-- TODO -->
 
+## Features
+
+<!-- TODO -->
+
 ## Todos
 
 - [x] Content pages
@@ -21,6 +25,7 @@
 - [ ] Theming
 - [ ] Local path & Remote url
 - [ ] Cover with absolute url
+- [ ] SSR Support
 
 ## Deploy
 

@@ -15,4 +15,4 @@
 export const wrapRootElement = ({ element }) => element
 
 // https://www.gatsbyjs.org/docs/browser-apis/#wrapPageElement
-export const wrapPageElement = ({ element, props }) => element
+export const wrapPageElement = ({ element }) => element

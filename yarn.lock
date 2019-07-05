@@ -1840,7 +1840,7 @@ babel-plugin-remove-graphql-queries@^2.7.0:
   resolved "https://registry.npm.taobao.org/babel-plugin-remove-graphql-queries/download/babel-plugin-remove-graphql-queries-2.7.0.tgz#dd5b1201cb90f1197e4588761af602f2e180f60a"
   integrity sha1-3VsSAcuQ8Rl+RYh2GvYC8uGA9go=
 
-"babel-plugin-styled-components@>= 1", babel-plugin-styled-components@^1.10.6:
+"babel-plugin-styled-components@>= 1":
   version "1.10.6"
   resolved "https://registry.npm.taobao.org/babel-plugin-styled-components/download/babel-plugin-styled-components-1.10.6.tgz#f8782953751115faf09a9f92431436912c34006b"
   integrity sha1-+HgpU3URFfrwmp+SQxQ2kSw0AGs=

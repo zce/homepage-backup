@@ -5,8 +5,8 @@ import { Layout } from '../components'
 import { scale } from '../utils/typography'
 
 const Text = styled.p`
-  ${scale(1)}
-  color: red;
+  ${scale(0.5)};
+  color: hotpink;
 `
 
 export default ({ location }) => (
