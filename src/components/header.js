@@ -1,49 +1,33 @@
 import React from 'react'
-import styled from 'styled-components'
 import { Link } from 'gatsby'
 
-import { rhythm, scale, options } from '../utils/typography'
-
-const Header = styled.header`
-  margin-bottom: ${rhythm(1)};
-`
-
-const Navigation = styled.nav`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`
-
-const Brand = styled(Link)`
-  ${scale(0.75)}
-  font-weight: ${options.headerWeight};
-
-  &:hover {
-    text-decoration: none;
-  }
-`
-
-const List = styled.ul`
-  margin-bottom: 0;
-  list-style: none;
-`
-
-const Item = styled.li`
-  margin: 0 0 0 ${rhythm(0.8)};
-  display: inline-block;
-`
+import { rhythm, scale, options } from '../styles'
 
 export default ({ title, menus }) => (
-  <Header>
-    <Navigation>
-      <Brand to="/">{title}</Brand>
-      <List>
+  <header style={{ marginBottom: rhythm(1) }}>
+    <nav
+      style={{
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center'
+      }}>
+      <Link
+        style={{
+          ...scale(0.75),
+          fontWeight: options.headerWeight
+        }}
+        to="/">
+        {title}
+      </Link>
+      <ul style={{ marginBottom: 0, listStyle: 'none' }}>
         {menus.map(i => (
-          <Item key={i.link}>
+          <li
+            style={{ margin: `0 0 0 ${rhythm(0.8)}`, display: `inline-block` }}
+            key={i.link}>
             <Link to={i.link}>{i.text}</Link>
-          </Item>
+          </li>
         ))}
-      </List>
-    </Navigation>
-  </Header>
+      </ul>
+    </nav>
+  </header>
 )

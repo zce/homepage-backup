@@ -48,3 +48,8 @@ Once inserted you can blend images beautifully into your content at different si
 ![](using-images-demo.gif)
 
 The post settings menu and publishing options can be found in the top right hand corner. For more advanced tips on post settings check out the [publishing options]() post!
+
+| name       | age |
+| ---------- | --- |
+| LearnShare | 12  |
+| Mike       | 32  |
