@@ -68,4 +68,3 @@ exports.taxonomies = {
     template: 'tag'
   }
 }
-

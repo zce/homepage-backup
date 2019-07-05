@@ -50,9 +50,9 @@ const createMarkdownField = ({ node, getNode, actions }) => {
     } = node.frontmatter
 
     const datetime = new Date(date)
-    const author = getNode(authorId ? authorId : 'Gatsby').slug
-    const category = getNode(categoryId ? categoryId : 'Uncategorized').slug
-    const tag = getNode(tagId ? tagId : 'Untagged').slug
+    const author = getNode(authorId || 'Gatsby').slug
+    const category = getNode(categoryId || 'Uncategorized').slug
+    const tag = getNode(tagId || 'Untagged').slug
 
     const context = {
       slug: slug || slugify(title, { lower: true }),
@@ -118,7 +118,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const result = await graphql(`
     query {
-      allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}) {
+      allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
         edges {
           node {
             id
@@ -181,19 +181,21 @@ exports.createPages = async ({ graphql, actions }) => {
 
   // https://www.gatsbyjs.org/docs/adding-pagination/
   // Create pages based on different content types
-  Object.values(collections).map(c => c.type).forEach(type => {
-    const items = posts.filter(e => e.node.fields.type === type)
-    items.forEach(({ node: { id, fields } }, i) => {
-      const prev = i === items.length - 1 ? null : items[i + 1].node
-      const next = i === 0 ? null : items[i - 1].node
-      const template = `./src/templates/${fields.template}.js`
-      createPage({
-        path: fields.permalink,
-        component: require.resolve(template),
-        context: { id, prev, next }
+  Object.values(collections)
+    .map(c => c.type)
+    .forEach(type => {
+      const items = posts.filter(e => e.node.fields.type === type)
+      items.forEach(({ node: { id, fields } }, i) => {
+        const prev = i === items.length - 1 ? null : items[i + 1].node
+        const next = i === 0 ? null : items[i - 1].node
+        const template = `./src/templates/${fields.template}.js`
+        createPage({
+          path: fields.permalink,
+          component: require.resolve(template),
+          context: { id, prev, next }
+        })
       })
     })
-  })
 
   // https://www.gatsbyjs.org/docs/adding-tags-and-categories-to-blog-posts/
   const { edges: authors } = result.data.allAuthorsYaml
@@ -202,7 +204,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const meta = [].concat(authors, categories, tags)
 
   // Create taxonomies pages
-  meta.forEach(item  => {
+  meta.forEach(item => {
     const { slug, fields } = item.node
     const template = `./src/templates/${fields.template}.js`
     createPage({
