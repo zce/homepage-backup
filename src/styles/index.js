@@ -1,22 +1,23 @@
 /**
- * https://github.com/KyleAMathews/typography.js
- *
- * Themes:
- * - typography-theme-fairy-gates
- * - typography-theme-funston
+ * Typography.js
  */
 
 import Typography from 'typography'
-import theme from './theme'
+
 import global from './global'
 import code from './code'
 import sample from './sample'
 
-theme.plugins = [global, code, sample]
+import * as theme from './theme'
 
-const styles = new Typography(theme)
+// load module styles as plugin
+theme.options.plugins = [global, code, sample]
 
-export const { scale, rhythm, options } = styles
+const styles = new Typography(theme.options)
+
+// export utilities
+export const { colors, breakpoints } = theme
+export const { options, rhythm, scale } = styles
 
 // for gatsby-plugin-typography
 export default styles

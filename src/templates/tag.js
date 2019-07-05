@@ -1,11 +1,10 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Layout from '../components/layout'
-import Meta from '../components/meta'
 
-export default ({ data: { tagsYaml }, pageContext: { slug } }) => (
-  <Layout>
-    <Meta title={tagsYaml.id} permalink={tagsYaml.fields.permalink} />
+import Layout from '../components/layout'
+
+export default ({ data: { tagsYaml }, location }) => (
+  <Layout location={location}>
     <h1>Tag {tagsYaml.id}</h1>
   </Layout>
 )

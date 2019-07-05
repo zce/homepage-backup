@@ -25,7 +25,7 @@ const createMarkdownField = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
 
   // ignore markdown dirname or filename, use frontmatter slug instead
-  // const permalink = createFilePath({ node, getNode, basePath: `posts` })
+  // const permalink = createFilePath({ node, getNode, basePath: 'posts' })
 
   const file = getNode(node.parent)
   //
@@ -67,11 +67,11 @@ const createMarkdownField = ({ node, getNode, actions }) => {
     return generatePermalink(config.permalink, context)
   }
 
-  createNodeField({ node, name: `type`, value: config.type })
-  createNodeField({ node, name: `template`, value: template })
-  createNodeField({ node, name: `permalink`, value: getPermalink() })
+  createNodeField({ node, name: 'type', value: config.type })
+  createNodeField({ node, name: 'template', value: template })
+  createNodeField({ node, name: 'permalink', value: getPermalink() })
   // for RSS Feed
-  // createNodeField({ node, name: `slug`, value: getPermalink() })
+  // createNodeField({ node, name: 'slug', value: getPermalink() })
 }
 
 const createYamlField = ({ node, getNode, actions }) => {
@@ -96,18 +96,18 @@ const createYamlField = ({ node, getNode, actions }) => {
     return generatePermalink(config.permalink, context)
   }
 
-  createNodeField({ node, name: `type`, value: config.type })
-  createNodeField({ node, name: `template`, value: template })
-  createNodeField({ node, name: `permalink`, value: getPermalink() })
+  createNodeField({ node, name: 'type', value: config.type })
+  createNodeField({ node, name: 'template', value: template })
+  createNodeField({ node, name: 'permalink', value: getPermalink() })
 }
 
 exports.onCreateNode = args => {
   switch (args.node.internal.type) {
-    case `MarkdownRemark`:
+    case 'MarkdownRemark':
       return createMarkdownField(args)
-    case `AuthorsYaml`:
-    case `CategoriesYaml`:
-    case `TagsYaml`:
+    case 'AuthorsYaml':
+    case 'CategoriesYaml':
+    case 'TagsYaml':
       return createYamlField(args)
   }
 }

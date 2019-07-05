@@ -9,8 +9,8 @@
  * - styles
  */
 export default (vr, options, styles) => {
-  console.log(vr)
-  console.log(options)
-  console.log(styles)
+  // console.log(vr)
+  // console.log(options)
+  // console.log(styles)
   return {}
 }

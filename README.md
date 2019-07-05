@@ -38,6 +38,7 @@
 - https://github.com/prichey/prestonrichey.com
 - https://github.com/taniarascia/taniarascia.com
 - https://github.com/fathomlondon/fath.om
+- https://github.com/jlengstorf/marisamorby.com
 - https://github.com/fabe/gatsby-universal
 - https://github.com/LekoArts/gatsby-starter-prismic
 - https://github.com/LekoArts/gatsby-starter-portfolio-cara
@@ -56,7 +57,6 @@
 - https://www.gatsbyjs.org/docs/css-libraries-and-frameworks/
 - https://github.com/KyleAMathews/typography.js
 - https://github.com/GatsbyCentral/gatsby-awesome-pagination
-- https://github.com/jlengstorf/marisamorby.com
 - https://github.com/graysonhicks/gatsby-plugin-remote-images
 
 ## Snippets

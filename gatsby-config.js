@@ -15,69 +15,59 @@ module.exports = {
   plugins: [
     // source
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `content`,
-        path: `${__dirname}/content`
+        name: 'content',
+        path: 'content'
       }
     },
     // transformer
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
           {
-            resolve: `gatsby-remark-images`,
+            resolve: 'gatsby-remark-images',
             options: {
-              maxWidth: 1024
+              maxWidth: 800
             }
           },
-          {
-            resolve: `gatsby-remark-responsive-iframe`,
-            options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`
-            }
-          },
-          {
-            resolve: `gatsby-remark-copy-linked-files`,
-            options: {
-              destinationDir: `attachments`
-            }
-          },
-          `gatsby-remark-autolink-headers`,
-          `gatsby-remark-smartypants`,
-          `gatsby-remark-prismjs`
+          'gatsby-remark-responsive-iframe',
+          'gatsby-remark-copy-linked-files',
+          'gatsby-remark-autolink-headers',
+          'gatsby-remark-smartypants',
+          'gatsby-remark-prismjs'
         ]
       }
     },
-    `gatsby-transformer-yaml`,
-    `gatsby-transformer-sharp`,
+    'gatsby-transformer-yaml',
+    'gatsby-transformer-sharp',
     // plugin
-    // `gatsby-plugin-sharp`, useless?
-    `gatsby-plugin-react-helmet`,
+    // 'gatsby-plugin-sharp', useless?
+    'gatsby-plugin-react-helmet',
     {
-      resolve: `gatsby-plugin-typography`,
+      resolve: 'gatsby-plugin-typography',
       options: {
-        pathToConfigModule: `src/styles`
+        pathToConfigModule: 'src/styles'
       }
     },
     {
-      resolve: `gatsby-plugin-nprogress`,
+      resolve: 'gatsby-plugin-nprogress',
       options: {
-        color: `#1ca086`,
-        showSpinner: false
+        // sync with ./src/styles/theme.js:9:12
+        color: '#ff6b6b'
       }
     },
-    // `gatsby-plugin-feed`,
-    `gatsby-plugin-sitemap`,
-    `gatsby-plugin-offline`
+    // 'gatsby-plugin-feed',
+    'gatsby-plugin-sitemap',
+    'gatsby-plugin-offline'
   ],
   // https://www.gatsbyjs.org/docs/path-prefix/
   // pathPrefix: '',
   mapping: {
     // https://www.gatsbyjs.org/docs/gatsby-config/#mapping-node-types
-    'MarkdownRemark.frontmatter.authors': `AuthorsYaml`,
-    'MarkdownRemark.frontmatter.categories': `CategoriesYaml`,
-    'MarkdownRemark.frontmatter.tags': `TagsYaml`,
+    'MarkdownRemark.frontmatter.authors': 'AuthorsYaml',
+    'MarkdownRemark.frontmatter.categories': 'CategoriesYaml',
+    'MarkdownRemark.frontmatter.tags': 'TagsYaml',
   }
 }

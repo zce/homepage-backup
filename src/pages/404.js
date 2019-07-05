@@ -1,5 +1,5 @@
 import React from 'react'
-import { Layout } from '../components'
+import Layout from '../components/layout'
 
 export default ({ location }) => (
   <Layout title="404 Not found" location={location}>

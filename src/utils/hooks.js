@@ -1,6 +1,11 @@
+/**
+ * https://reactjs.org/docs/hooks-intro.html
+ */
+
 import { useStaticQuery, graphql } from 'gatsby'
 
-export default () =>
+// hooks/metadata.js
+export const useMetadata = () =>
   useStaticQuery(graphql`
     query {
       site {

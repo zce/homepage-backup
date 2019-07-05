@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 
-import { Layout } from '../components'
+import Layout from '../components/layout'
 
 export default ({ data, location }) => (
   <Layout title={`All posts`} location={location}>

@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Image from 'gatsby-image'
 
-import { Layout } from '../components'
+import Layout from '../components/layout'
 import { rhythm, scale } from '../styles'
 
 export default ({ data, pageContext, location }) => {

@@ -1,14 +1,8 @@
-/**
- * vr
- * - rhythm
- * - establishBaseline
- * - linesForFontSize
- * - adjustFontSizeTo
- * - scale
- */
-export default ({ rhythm }, options) => ({
+import { colors } from './theme'
+
+export default ({ rhythm }) => ({
   pre: {
-    background: options.colors.lighter,
+    background: colors.lighter,
     borderRadius: '3px',
     lineHeight: 1.42,
     overflow: 'auto',
@@ -16,7 +10,7 @@ export default ({ rhythm }, options) => ({
     padding: rhythm(0.75)
   },
   'tt,code': {
-    backgroundColor: options.colors.lighter,
+    backgroundColor: colors.lighter,
     borderRadius: '3px',
     fontFamily:
       '"SFMono-Regular", Consolas,"Roboto Mono","Droid Sans Mono","Liberation Mono",Menlo,Courier,monospace',
