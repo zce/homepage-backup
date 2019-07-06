@@ -1,20 +1,7 @@
 ---
 title: Hello world
-description: ''
 cover: hello-world.png
 date: 1992-02-25 13:00:00
-updated: 1992-02-25 13:00:00
-slug: hello-world
-permalink: /hello-world/
-private: true
-draft: true
-comment: false
-authors:
-  - Lei Wang
-categories:
-  - Uncategorized
-tags:
-  - Untagged
 ---
 
 Welcome to Gatsty. This is your first post. Edit or delete it, then start writing!

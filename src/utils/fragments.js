@@ -2,6 +2,7 @@
  * NOTE: Gatsby auto-discovers all GraphQL queries and fragments, which means
  * there’s no need to import these fragments to components that will use them.
  */
+
 // import { graphql } from 'gatsby'
 
 // // Loads required data to use the `MarkdownSection` component.

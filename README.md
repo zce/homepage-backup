@@ -12,13 +12,17 @@
 
 ## Pages
 
-- index
-- blog
-- archives
-- authors
-- categories
-- tags
-- 404
+- /
+- /blog/
+- /{year}/{month}/{slug}/
+- /archives/
+- /authors/
+- /authors/{slug}/
+- /categories/
+- /categories/{slug}/
+- /tags/
+- /tags/{slug}/
+- /not-found/
 
 ## Todos
 
@@ -39,6 +43,7 @@
 - [ ] Create default nodes by programming
 - [ ] Global State
 - [ ] Category Hierarchy
+- [ ] Gatsby Theme
 
 ## Deploy
 
