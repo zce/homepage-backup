@@ -5,15 +5,13 @@
   "color-shorthand": true,
   "element-case": "lower",
   "eof-newline": true,
-  "exclude": [ "node_modules/**" ],
+  "exclude": ["node_modules/**"],
   "leading-zero": true,
   "lines-between-rulesets": 1,
   "quotes": "single",
   "remove-empty-rulesets": false,
   "sort-order": [
-    [
-      "$variable"
-    ],
+    ["$variable"],
     [
       "position",
       "top",
@@ -217,14 +215,8 @@
       "user-zoom",
       "orientation"
     ],
-    [
-      "..."
-    ],
-    [
-      "$include",
-      "$extend",
-      "$import"
-    ]
+    ["..."],
+    ["$include", "$extend", "$import"]
   ],
   "sort-order-fallback": "abc",
   "space-after-colon": 1,
