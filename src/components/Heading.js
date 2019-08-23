@@ -1,16 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 import './Heading.css'
 
-class Heading extends Component {
-  render () {
-    return (
-      <>
-        <h1 className='title'>{this.props.title}</h1>
-        <p className='slogan'>{this.props.slogan}</p>
-      </>
-    )
-  }
-}
-
-export default Heading
+export default ({ title, slogan }) => (
+  <>
+    <h1 className='title'>{title}</h1>
+    <p className='slogan'>{slogan}</p>
+  </>
+)
