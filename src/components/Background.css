@@ -23,7 +23,7 @@
   background: no-repeat center / cover;
   background-image: inherit;
   transition-delay: 0.5s;
-  transition-duration: 2.5s;
+  transition-duration: 1.5s;
   transition-property: opacity, filter, transform;
 }
 
