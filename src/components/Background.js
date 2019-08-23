@@ -24,6 +24,8 @@ export default () => {
   loading && classes.push('loading')
 
   return (
-    <div className={classes.join(' ')} style={{ backgroundImage: `url(${url})` }} />
+    <div className={classes.join(' ')}>
+      <img src={url} alt='Unsplash photos' />
+    </div>
   )
 }
