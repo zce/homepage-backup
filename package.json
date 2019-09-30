@@ -64,8 +64,8 @@
     "not op_mini all"
   ],
   "dependencies": {
-    "react": "16.10.0",
-    "react-dom": "16.10.0"
+    "react": "16.10.1",
+    "react-dom": "16.10.1"
   },
   "devDependencies": {
     "@commitlint/cli": "8.2.0",
