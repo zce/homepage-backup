@@ -74,7 +74,7 @@
     "csscomb": "4.3.0",
     "cz-conventional-changelog": "3.0.2",
     "gh-pages": "2.2.0",
-    "husky": "4.0.7",
+    "husky": "4.0.10",
     "lint-staged": "9.5.0",
     "react-scripts": "3.3.0",
     "standard": "14.3.1"
