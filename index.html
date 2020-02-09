@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#454d5d">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Hey Guys, I’m Lei Wang</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo+2&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <svg class="logo" viewBox="0 0 472 450">
+    <defs>
+      <filter id="shadow" x="-12.7%" y="-13.4%" width="125.4%" height="126.7%" filterUnits="objectBoundingBox">
+        <feOffset in="SourceAlpha" result="offset-outer" />
+        <feGaussianBlur stdDeviation="20" in="offset-outer" result="blue-outer" />
+        <feComposite in="blue-outer" in2="SourceAlpha" operator="out" result="blue-outer" />
+        <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0" in="blue-outer" />
+      </filter>
+    </defs>
+    <mask id="mask" fill="#fff">
+      <path d="M472 114.26L203.029 335.74H407.1L472 449.48H64.9L0 335.74l268.971-221.48H64.9L0 .52h407.1z" />
+    </mask>
+    <g mask="url(#mask)" fill="#ff0">
+      <path d="M0 0h472v449H0z" />
+    </g>
+    <g mask="url(#mask)">
+      <path d="M0 335.74l64.9 113.74L472 114.26 407.1.52z" filter="url(#shadow)" />
+    </g>
+  </svg>
+  <h1 class="title">{{ site.title }}</h1>
+  <p class="slogan">{{ site.slogan }}</p>
+  <ul class="navigation">
+    {% for item in site.links %}
+    <li key={{ item.href }}>
+      <a href={{ item.href }} target={{ item.target }}>{{ item.text }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+  <script src="app.js"></script>
+</body>
+</html>
