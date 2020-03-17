@@ -1,0 +1,30 @@
+{
+  "short_name": "zce",
+  "name": "zce.me",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "icon.png",
+      "sizes": "24x24",
+      "type": "image/png"
+    },
+    {
+      "src": "icon.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "icon.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#454d5d",
+  "background_color": "#ffffff"
+}
