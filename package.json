@@ -73,7 +73,7 @@
     "commitizen": "4.0.3",
     "csscomb": "4.3.0",
     "cz-conventional-changelog": "3.1.0",
-    "gh-pages": "2.2.0",
+    "gh-pages": "3.1.0",
     "husky": "4.2.3",
     "lint-staged": "10.0.8",
     "react-scripts": "3.4.0",
