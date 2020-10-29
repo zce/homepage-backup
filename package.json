@@ -77,6 +77,6 @@
     "husky": "4.2.3",
     "lint-staged": "10.0.8",
     "react-scripts": "3.4.0",
-    "standard": "14.3.3"
+    "standard": "16.0.0"
   }
 }
