@@ -76,7 +76,7 @@
     "gh-pages": "2.2.0",
     "husky": "4.2.3",
     "lint-staged": "10.0.8",
-    "react-scripts": "3.4.0",
+    "react-scripts": "3.4.4",
     "standard": "14.3.3"
   }
 }
